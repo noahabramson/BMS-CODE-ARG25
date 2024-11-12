@@ -1,0 +1,23 @@
+Unique data to multiple devices
+===================================
+In some cases, you want to control each device in the chain individual.
+For example to only write a value to the second device in the chain.
+This can be done relative easy. In the following example
+
+.. code-block:: python
+   :name: Define custom command
+    # Make sure your board_list contains multiple devices
+    board_list = [{'Device': ADBMS6830},{'Device': ADBMS6830},{'Device': ADBMS6830}]
+
+    command_list = [
+        {"command": "$SPI_WAKEUP$", "arguments": {"Wakeup Time": 400}},
+        {"command": "SRST", "map_key": "val"},
+        {"command": "$DELAY_MS$", "arguments": {"Delay": 10}},
+        {"command": "$SPI_WAKEUP$", "arguments": {"Wakeup Time": 10}},
+        # Instead of writing arguments, write board_list. Then define a list with dicts for each device
+        {"command": "WRCFGA", "board_list": [{"REFON": True, 'FC': 0}, {"REFON": True, 'FC': 2}, {"REFON": True, 'FC': 5}]},
+    ]
+
+As you can see, you only need to use board_list instead of arguments.
+If you want to see a full example, please take a look at scratchpads/ADBMS6830/ADBMS6830_multi_device_multi_data_scratchpad.py
+

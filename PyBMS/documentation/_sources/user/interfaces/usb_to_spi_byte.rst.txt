@@ -1,0 +1,29 @@
+USB to SPI Byte
+===================================
+USB to SPI Byte is the main interface of PyBMS API.
+It converts the compiled command list to a table of SPI Data, amount of recieved and transmitted bytes and some additional information.
+If you want to know exactly what is being send to the microcontroller, please read the user/interface/virtual_spi documentation.
+
+This interfaces then uses a serial connection to communicate with the microcontroller.
+This is most likely the SDP-K1.
+However, this can also be a Teensy 4.1 or another type of microcontroller.
+For the interface this is not relevant. The interface only has to know the com port and the baudrate.
+
+You can find an example of this in most scratchpads. This is the code that sets up the interface:
+
+.. code-block:: python
+   :name: usb2spibyte
+
+    interface = USB_TO_SPI_BYTE('COM23', 115200)
+
+Just replace 'COM23' with the comport that is connected and you are good to go.
+
+Errors
+------------
+In case PyBMS shows a Time Out error, this usually means there is a problem with the microcontroller.
+In the case of the SDP-K1 there are a few possible issues.
+
+- The red led is blinking or on. Please press the reset button, this fixes the issue
+- In case the SDP-K1 shows up as two com ports, try both. Depending on the firmware it can show two com ports, but only one will work
+- The SDP-K1 is in 1.8 volt mode, please set the jumper to 3.3 volt
+- The SDP-K1 is not properly connected. The USB C version does not have the best connector

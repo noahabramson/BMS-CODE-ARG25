@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Command &mdash; ADI_pyBMS 0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Command Counter Check" href="Command_Counter.html" />
+    <link rel="prev" title="Free Running Mode" href="Free_Running_Mode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ADI_pyBMS
+          </a>
+              <div class="version">
+                2.0.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user.html">User documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">How to get PyBMS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces.html">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bms_ic.html">How to talk to a BMS IC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdp_k1_commands.html">SDP-K1 Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saleae_logic_analyzer.html">Saleae Logic Analyzer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../advanced.html">Advanced Features</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Free_Running_Mode.html">Free Running Mode</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Custom Command</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#local-custom-command">Local Custom Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extra-advanced-add-command-to-device-definition">Extra advanced: add command to device definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#advanced-variable-command">Advanced: Variable Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Command_Counter.html">Command Counter Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Unique_data_to_multiple_devices.html">Unique data to multiple devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Commandlist2Arduino_Code_converter.html">Commandlist2Arduino Code converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Timing_Calculator.html">Timing Calculator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../application-notes.html">Application Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ADI_pyBMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../user.html">User documentation</a> &raquo;</li>
+          <li><a href="../advanced.html">Advanced Features</a> &raquo;</li>
+      <li>Custom Command</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user/advanced/Custom_Command.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="custom-command">
+<h1>Custom Command<a class="headerlink" href="#custom-command" title="Permalink to this heading"></a></h1>
+<p>In some cases it might be necessary to add a custom command. In general all commands are added to all the devices, but if for some reason
+you need to test a custom command, this is how you add it.</p>
+<section id="local-custom-command">
+<h2>Local Custom Command<a class="headerlink" href="#local-custom-command" title="Permalink to this heading"></a></h2>
+<p>This feature lets you define locally a test command.
+You can just add the example in your scatchpad.
+The advantage of this, is that you
+The PEC data is already calculated so you don’t have to worry about this</p>
+<div class="highlight-python notranslate" id="define-custom-command-import-the-test-commmand-from-engine-devices-adbms-test-device-import"><div class="highlight"><pre><span></span> <span class="c1"># Define a board. For example the ADBMS2950</span>
+ <span class="n">board</span> <span class="o">=</span> <span class="n">ADBMS2950</span>
+
+ <span class="c1"># Define a board list as normal</span>
+ <span class="n">board_list</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;Device&quot;</span><span class="p">:</span> <span class="n">board</span><span class="p">}]</span>
+
+ <span class="c1"># Dynamicly add the bitfields and registers to the command. You don&#39;t have to change anything here.</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">BITFIELDS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_BITFIELD</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_BITFIELD</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">MEMORY_MAP</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_REGISTER0</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_REGISTER0</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">MEMORY_MAP</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_REGISTER1</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_REGISTER1</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">MEMORY_MAP</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_REGISTER2</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_REGISTER2</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">MEMORY_MAP</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_REGISTER3</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_REGISTER3</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">MEMORY_MAP</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_REGISTER4</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_REGISTER4</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">MEMORY_MAP</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_REGISTER5</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_REGISTER5</span><span class="p">})</span>
+ <span class="c1"># Add the command to your define (for example ADBMS2950)</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">COMMANDS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_RD_CMD</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_RD_CMD</span><span class="p">})</span>
+ <span class="n">board</span><span class="o">.</span><span class="n">COMMANDS</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">TEST_WR_CMD</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">TEST_WR_CMD</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Now you can use the test_rd_cmd or test_wr_cmd in your command list.
+The kwargs are cmd_code and test_value. Here you can see an example</p>
+<div class="highlight-python notranslate" id="define-custom-command"><div class="highlight"><pre><span></span> <span class="n">command_list</span> <span class="o">=</span> <span class="p">[</span>
+     <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$SPI_WAKEUP$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Wakeup Time&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">}},</span>
+     <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$DELAY_MS$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Delay&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}},</span>
+     <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;test_wr_cmd&quot;</span><span class="p">,</span> <span class="s2">&quot;cmd_code&quot;</span><span class="p">:</span> <span class="mh">0x058e</span><span class="p">,</span> <span class="s2">&quot;test_value&quot;</span><span class="p">:</span> <span class="mh">0xFFFFFFFF</span><span class="p">}</span>
+     <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;test_rd_cmd&quot;</span><span class="p">,</span> <span class="s2">&quot;cmd_code&quot;</span><span class="p">:</span> <span class="mh">0x008e</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;val&quot;</span><span class="p">}</span>
+ <span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="extra-advanced-add-command-to-device-definition">
+<h2>Extra advanced: add command to device definition<a class="headerlink" href="#extra-advanced-add-command-to-device-definition" title="Permalink to this heading"></a></h2>
+<p>If you want to add a command to the device definition, that is also possible.
+To do that, open the device definition file in <cite>Engine/Devices</cite>
+Then, create a new class that has the name of your command.
+Make sure you select the right parent class.
+Most likely this will be <cite>bmsbase.SPIWRITE</cite> or <cite>bmsbase.SPIREAD</cite>.
+After this, you can populate the other fields as in the example.</p>
+<div class="highlight-python notranslate" id="add-custom-command"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">WRCFGA</span><span class="p">(</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">SPIWrite</span><span class="p">):</span>
+    <span class="n">STATIC</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CMD_REGISTER</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CMD_PEC_REGISTER</span><span class="p">(),</span> <span class="kc">False</span><span class="p">]]</span>
+    <span class="n">STATIC_LENGTH</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">VARIABLE</span> <span class="o">=</span> <span class="p">[[</span><span class="n">CFGAR0</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CFGAR1</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CFGAR2</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CFGAR3</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CFGAR4</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span>
+                <span class="p">[</span><span class="n">CFGAR5</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CCNT_REGISTER</span><span class="p">(),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">DATA_PEC_REGISTER</span><span class="p">(),</span> <span class="kc">False</span><span class="p">]]</span>
+    <span class="n">VARIABLE_LENGTH</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;WRCFGA&#39;</span>
+    <span class="n">DESCRIPTION</span> <span class="o">=</span> <span class="s1">&#39;Write Configuration Group A&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">WRCFGA</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">local_definitions</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">CMD0</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">CMD0</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mh">0x00</span><span class="p">),</span>
+            <span class="n">CMD1</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">CMD1</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mh">0x01</span><span class="p">),</span>
+            <span class="n">CCNT</span><span class="o">.</span><span class="n">NAME</span><span class="p">:</span> <span class="n">CCNT</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mh">0x00</span><span class="p">)</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+<p>After this, you need to add the registers (also known as bytefields).
+This contains the bitfields. An example of this you can find here:</p>
+<div class="highlight-python notranslate" id="add-custom-register"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CFGAR0</span><span class="p">(</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Register</span><span class="p">):</span>
+    <span class="n">MEM_KEY</span> <span class="o">=</span> <span class="s1">&#39;Configuration Register Group A&#39;</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;CFGAR0&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CFGAR0</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="p">[[</span><span class="n">REFON</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">RSVD0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">RSVD0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">RSVD0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">RSVD0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">CTH</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+             <span class="p">[</span><span class="n">CTH</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">CTH</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>As you can see, this register is filled with bitfields.
+If you don’t take existing bitfields, you have to define them. Here you can see the example:</p>
+<div class="highlight-python notranslate" id="add-custom-bitfield"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CTH</span><span class="p">(</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">BitfieldInt</span><span class="p">):</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;CTH&#39;</span>
+    <span class="n">DESCRIPTION</span> <span class="o">=</span> <span class="s1">&#39;C vs S ADC Comparison Voltage Threshold&#39;</span>
+    <span class="n">MEM_KEY</span> <span class="o">=</span> <span class="s1">&#39;Configuration&#39;</span>
+    <span class="n">DEFAULT_VALUE</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">MAX_VALUE</span> <span class="o">=</span> <span class="mh">0x7</span>
+    <span class="n">MIN_VALUE</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">LENGTH</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">LIMITS</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;range&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">raw_value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CTH</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">CTH</span><span class="o">.</span><span class="n">LENGTH</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">raw_value</span><span class="o">=</span><span class="n">raw_value</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">CTH</span><span class="o">.</span><span class="n">NAME</span>
+</pre></div>
+</div>
+<p>You actually don’t have to give the LIMITS parameters. If you put {} in there, it will be limited by the LENGTH variable.
+This can be useful if you have a 2 bit bitfield that can only take 1 and 2 for example.
+The DESCRIPTION can be left an empty string since it is only required in the GUI.
+The mem_key is the shown in the results dict.</p>
+<p>What can go wrong?
+You might be temped to take a shortcut incase your bitfield takes the full byte.
+However, this will most likely lead to problems.
+Writing might still work up to a certain level, but reading will most definitly throw errors.</p>
+</section>
+<section id="advanced-variable-command">
+<h2>Advanced: Variable Command<a class="headerlink" href="#advanced-variable-command" title="Permalink to this heading"></a></h2>
+<p>Let say you have a command that uses and address. It would be a waste if you have to add
+a command for each address. Luckily, there is a shortcut for that.
+You can define individual bits by calling bmsbase.Bit0 for 0 and bmsbase.Bit1 for a 1.
+After that, you can also define bitfields. This can be useful if you want to add an address.
+In the example, RD and OPT are the variable part. These are respectivicly 1 bit and 3 bits.
+The bitfields of course have to be defined as well. You can see how in the example above.</p>
+<div class="highlight-python notranslate" id="variable-command"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ADI1</span><span class="p">(</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">SPIWrite</span><span class="p">):</span>
+    <span class="n">STATIC</span> <span class="o">=</span> <span class="p">[[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Register</span><span class="p">(</span>
+        <span class="p">[[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">RD</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">OPT</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">OPT</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">bmsbase</span><span class="o">.</span><span class="n">Bit0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">OPT</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">OPT</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">]),</span> <span class="kc">False</span><span class="p">],</span> <span class="p">[</span><span class="n">CMD_PEC_REGISTER</span><span class="p">(),</span> <span class="kc">False</span><span class="p">]]</span>
+    <span class="n">STATIC_LENGTH</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">VARIABLE</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">VARIABLE_LENGTH</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;ADI1&#39;</span>
+    <span class="n">DESCRIPTION</span> <span class="o">=</span> <span class="s1">&#39;Start I1/VB1 Conversion&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ADI1</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This block currently does not have a variable part. However, you can add this in the same way
+as other commands.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Free_Running_Mode.html" class="btn btn-neutral float-left" title="Free Running Mode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Command_Counter.html" class="btn btn-neutral float-right" title="Command Counter Check" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Analog Devices Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

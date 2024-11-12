@@ -1,0 +1,42 @@
+# Timing Calculator
+
+Be aware, this function is still in alpha and will change in the future.
+
+This class makes sure it's easy to get the timings of a command list. Instead of using an excel, you can simple run a few commands and you'll get the timings.
+The only you have to do is, give some information on your system. The values you need to give (please put the time in uS) are:
+- t_clk: 0.5 # 2MHz, clk period
+- t5: 2 # CS Rising Edge to CS Falling Edge
+- t6: 0.5 # SCK Rising edge to CS Rising Edge
+- t7: 0.5 # CSB Falling Edge to SCK Rising Edge
+- t_idle_between_bytes: 0.532 # Time between byte
+- mcu_overhead: 2 # Time per transaction overhead
+
+Write these values in a file called `config.yml` It is advices to keep this file in the same folder as your scratchpad, but you can keep it everywhere.
+You can also give a dict instead of a yaml file. All you have to do, is send a dict object with the values instead of the string of the path.
+
+## How does it work
+
+There are only two lines of code you need to do the timing calculation. First, you make the object and tell the object your configuration. In this case, you define the config via the config.yml file.
+```python
+tc = TimingCalculator('config.yml')
+```
+If you prefer the make a dict, it works like this:
+```python
+tc = TimingCalculator(dict_with_timing_values)
+```
+
+Instead of using the running the command_list with `results = bms.run_generic_command_list(command_list, board_list)`, you run the following command with the following parameters:
+- command_list, is the command_list as usual
+- board_list, is the board_list as usual. For example `board_list = [{'Device': ADBMS6842}]`
+- 'result.csv', the csv where the data will be stored. The function also returns a function dict with the result
+```python
+res = tc.calculate_timings(command_list, board_list, 'result.csv')
+```
+
+## Additional information
+
+You can use mixed daisychains and multiple devices. Also, it is possible to use `DELAY_MS`, `DELAY_US` and `SPI_WAKEUP`.
+These three commands will influence the timing results. 
+
+In case you don't give `'result.csv'` as a string to the `calculate_timings` function, you will only get a dict as output. 
+This can be useful in case you want to continue with these values

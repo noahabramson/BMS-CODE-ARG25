@@ -1,0 +1,85 @@
+How to talk to a BMS IC
+===================================
+The concept the scripts in PyBMS all are based on the following components:
+
+Creating an interface (selecting the COM port, selecting the device):
+
+.. code-block:: python
+   :name: import
+
+   interface = USB_TO_SPI_BYTE('COM28', 115200, stdout=False)
+   bms = BMS(interface)
+   board_list = [{'Device': ADBMS2950}]
+
+Creating a command list:
+
+.. code-block:: python
+   :name: command_list
+
+   command_list = [
+       {"command": "$SPI_WAKEUP$", "arguments": {"wakeup_time": 400}},
+       {"command": "ADI1", "arguments": {"RD": True}},
+       {"command": "$DELAY_MS$", "arguments": {"delay": 10}},
+       {"command": "SNAP"},
+       {"command": "RDI", "map_key": "Current"},
+       {"command": "RDVB", "map_key": "VBAT"},
+       {"command": "UNSNAP"},
+
+Sending the command list to the device:
+
+.. code-block:: python
+   :name: results
+
+    results = bms.run_generic_command_list(command_list, board_list)
+
+Interface
+------------
+
+The interface part is easy. You only need to define which device you are using and which comport. PyBMS is able to talk to many devices. So you can also make (mixed) daisy chains here. You can do that like this:
+
+.. code-block:: python
+   :name: board_list
+
+   board_list = [{'Device': ADBMS2950}, {'Device': ADBMS6830}]
+
+
+Command list
+-------------
+The command list is the hard of PyBMS. Here we define which commands we are going to send to the device. These commands are send to all devices in the chain. It is currently not possible to send certain commands to certain devices. These commands can be find in the datasheet of the selected device. In the case of Lion (6830), there is even a whole list of all the commands that can be used! That can be found on Table 51. Command Codes. The syntax of the commands in the command list is as follows:
+
+.. code-block:: python
+   :name: command
+
+   {'command': 'The name of the command', "arguments": {the bitfields that can be selected, for example 'CONT': True, "map_key": "the key where the results are written to"}},
+
+For example, in the case of:
+
+.. code-block:: python
+   :name: command_2
+
+   {'command': 'ADCV', "arguments": {"CONT": False, "RD": False}},
+
+The command name is ADCV and the bitfields CONT (for continious measurement) and RD (for redundant) measurement are both False
+
+Results
+----------
+The results are returned in a dict. The format of this is as follows
+
+.. code-block:: python
+   :name: result_syntax
+
+    results[loop number][map key][device number][key of value]
+
+- *Loop number*: int, in case you are using the loop functionality, this will be the measurement number you did. In case you don't run a loop, this value doesn't exist and you can remove loop number all together
+- *map key*: str, this is the key where you mapped your value to. For example 'Current'. This is the value you can choose yourself. It is possible to write multiple value to the same map_key, but if they overwrite only the latest will remain
+- *device_number*: int, in case you only using one device, this value will be zero. The next device will have a one etc
+- *key of value*: str, this is the most complicated value. This is the name of the value on how it is written. For example, pec_match, I1, I2, OC1TH. These names should be the same as in the datasheet, but sometimes or not exactly up to date.
+
+This will for example be the value of I1 of the first device in the chain.
+
+.. code-block:: python
+   :name: result_example
+
+   results["Current"][0]["I1"]
+
+

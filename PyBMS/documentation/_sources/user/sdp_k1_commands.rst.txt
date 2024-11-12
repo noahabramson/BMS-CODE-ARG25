@@ -1,0 +1,96 @@
+SDP-K1 Commands
+=================================
+
+In some case, there are some specific commands needed for the SDP-K1. For example a delay or setting another frequence. The syntax of these commands is as follows:
+
+.. code-block:: python
+   :name: sdp_k1_$SPI_WAKEUP$
+
+   {"command": "$SPI_WAKEUP$", "arguments": {"wakeup_time": 400}},
+
+The command is placed at $SPI_WAKEUP$ and in the argumentsfield (which now holds wakeup_time), you can place arguments. The hex value in the list listed, are only relevant for developers.
+
++--------------------------+-------+
+| Command                  | Code  |
++==========================+=======+
+| 'write'                  | 0x01  |
++--------------------------+-------+
+| 'write_open'             | 0x13  |
++--------------------------+-------+
+| 'read'                   | 0x02  |
++--------------------------+-------+
+| 'poll'                   | 0x03  |
++--------------------------+-------+
+| 'delay_us'               | 0x04  |
++--------------------------+-------+
+| 'delay_ms'               | 0x05  |
++--------------------------+-------+
+| 'gpio_write'             | 0x06  |
++--------------------------+-------+
+| 'gpio_read'              | 0x07  |
++--------------------------+-------+
+| '$SPI_WAKEUP$'           | 0x08  |
++--------------------------+-------+
+| 'loop'                   | 0x09  |
++--------------------------+-------+
+| 'repeat'                 | 0x0A  |
++--------------------------+-------+
+| 'timer_start'            | 0x0B  |
++--------------------------+-------+
+| 'timer_stop'             | 0x0C  |
++--------------------------+-------+
+| 'spi_clock_out'          | 0x0D  |
++--------------------------+-------+
+| 'spi_set_frequency_khz'  | 0x0E  |
++--------------------------+-------+
+| 'i2c_write'              | 0x0F  |
++--------------------------+-------+
+| 'i2c_read'               | 0x10  |
++--------------------------+-------+
+| 'write_i2c_dut'          | 0x0F  |
++--------------------------+-------+
+| 'read_i2c_dut'           | 0x10  |
++--------------------------+-------+
+| 'spi_write'              | 0x01  |
++--------------------------+-------+
+| 'spi_read'               | 0x02  |
++--------------------------+-------+
+| 'i2c_set_frequency_khz'  | 0x11  |
++--------------------------+-------+
+| 'spi_set_mode'           | 0x12  |
++--------------------------+-------+
+| 'spi_slave_poll'         | 21    |
++--------------------------+-------+
+| 'spi_slave_read'         | 22    |
++--------------------------+-------+
+| 'spi_slave_write'        | 23    |
++--------------------------+-------+
+| 'uart_write'             | 24    |
++--------------------------+-------+
+| 'uart_read'              | 25    |
++--------------------------+-------+
+| 'uart_wakeup'            | 26    |
++--------------------------+-------+
+| 'pwm_start'              | 27    |
++--------------------------+-------+
+| 'pwm_stop'               | 28    |
++--------------------------+-------+
+
+The commands that are bold are probably the most relevant commands. Here you can find an example on how to use them:
+
+.. code-block:: python
+   :name: sdp_k1_examples
+
+   {"command": "$SPI_WAKEUP$", "arguments": {"wakeup_time": 400}},
+   {"command": "$DELAY_US$", "arguments": {"Delay": 1000}},
+   {"command": "$DELAY_MS$", "arguments": {"delay": 1000}},
+   {"command": "$SPI_CLOCK_OUT$", "arguments": {"Num Bytes": 3}},
+   # Write 1 to D7 of the SDP-K1
+   {"command": "$GPIO_WRITE$", "arguments": {"GPIO Pin": 106, "GPIO Value": 1}},
+   {'command': '$SPI_SET_FREQUENCY_kHz$', 'arguments': {'Frequency': 2000}},
+
+You can use the GPIO ports of the SDP-K1 to control various things. An example of this you can find in
+scratchpads/SDP-K1/SDP-K1_GPIOWRITE_simple.py
+
+On note if trying to set the frequency on any STM32F micrcontrollers (SDP-K1 is one of them), the max frequency is 1.4 mHz due to a divider.
+If you are using a Teensy 4.1 instead, you have all the freedom and can choose any frequency you would like.

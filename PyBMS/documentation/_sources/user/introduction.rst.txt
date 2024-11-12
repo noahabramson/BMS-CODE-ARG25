@@ -1,0 +1,33 @@
+Introduction
+===================================
+
+Welcome to PyBMS API documentation
+***********************************
+
+This document/web page should give a brief explanation on all modules and classes
+of the PyBMS API Library. The goal of PyBMS API is the accelerate production of ADI's BMS
+IC's. In other words, to enhance the user experience in converting datasheet
+information to real world products.
+
+To do this, PyBMS API offers an easy and pleasant python experience to communicate with
+IC's without having to worry about timings, bitfields and checksums. For example,
+by offering a scratchpad for BMS products.
+
+The goal of PyBMS is always to keep as close to the datasheet as possible.
+As a result of this, some bitfields might change names. If the datasheet gets updated,
+so does PyBMS. Make sure you always get the latest datasheet.
+Also, make sure you read the latest datasheet.
+Especially on topics like discharching or EIS.
+If configured incorrect, there is a change of braking the IC or worse.
+
+PyBMS API is always under development. In case of any bugs or strange behaviour, make sure
+to get the latest version.
+
+Version explanation
+********************
+
+The format for the version will consist of A.B.C. C is just a version number. It might add new features, but
+you won't be able to see it. B means that there has been a big overhaul, but it should be backwards
+compatible with all version where B==B. In case A increases, backward compatitbilty is not guaranteed
+anymore.
+

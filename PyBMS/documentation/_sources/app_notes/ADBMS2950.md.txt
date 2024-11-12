@@ -1,0 +1,907 @@
+# Commands ADBMS2950
+
+## WRCFGA
+
+| Register | Bit 7  |  Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:-------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  CFGAR0  |  OCEN  |   VS5   |  VS4   |  VS3   |  VS2   |  VS2   |  VS1   |  VS1   |
+|  CFGAR1  | INJTM  |  INJECC | RSVD0  | INJTS  | INJMON | INJMON | INJOSC | INJOSC |
+|  CFGAR2  |  SOAK  |   SOAK  |  SOAK  |  VS10  |  VS9   |  VS8   |  VS7   |  VS6   |
+|  CFGAR3  | RSVD0  |  GPO6C  | GPO6C  | GPO5C  | GPO4C  | GPO3C  | GPO2C  | GPO1C  |
+|  CFGAR4  | SPI3W  | GPIO1FE | GPO6OD | GPO5OD | GPO4OD | GPO3OD | GPO2OD | GPO1OD |
+|  CFGAR5  | VB2MUX |  VB1MUX | SNAPST | REFUP  | COMMBK |  ACCI  |  ACCI  |  ACCI  |
+
+## WRCFGB
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  |  Bit 3   |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:--------:|:-------:|:-------:|:-------:|
+|  CFGBR0  | OC1TEN | OC1TH  | OC1TH  | OC1TH  |  OC1TH   |  OC1TH  |  OC1TH  |  OC1TH  |
+|  CFGBR1  | OC2TEN | OC2TH  | OC2TH  | OC2TH  |  OC2TH   |  OC2TH  |  OC2TH  |  OC2TH  |
+|  CFGBR2  | OC3TEN | OC3TH  | OC3TH  | OC3TH  |  OC3TH   |  OC3TH  |  OC3TH  |  OC3TH  |
+|  CFGBR3  | OCTSEL | OCTSEL | REFTEN | RSVD0  |   OCDP   |  RSVD0  |  OCDGT  |  OCDGT  |
+|  CFGBR4  |  OCBX  |  OCAX  | OCMODE | OCMODE |  OC3GC   |  OC2GC  |  OC1GC  |   OCOD  |
+|  CFGBR5  | GPIO4C | GPIO3C | GPIO2C | GPIO1C | GPIO2EOC | DIAGSEL | DIAGSEL | DIAGSEL |
+
+## RDCFGA
+
+| Register | Bit 7  |  Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:-------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  CFGAR0  |  OCEN  |   VS5   |  VS4   |  VS3   |  VS2   |  VS2   |  VS1   |  VS1   |
+|  CFGAR1  | INJTM  |  INJECC | RSVD0  | INJTS  | INJMON | INJMON | INJOSC | INJOSC |
+|  CFGAR2  |  SOAK  |   SOAK  |  SOAK  |  VS10  |  VS9   |  VS8   |  VS7   |  VS6   |
+|  CFGAR3  | RSVD0  |  GPO6C  | GPO6C  | GPO5C  | GPO4C  | GPO3C  | GPO2C  | GPO1C  |
+|  CFGAR4  | SPI3W  | GPIO1FE | GPO6OD | GPO5OD | GPO4OD | GPO3OD | GPO2OD | GPO1OD |
+|  CFGAR5  | VB2MUX |  VB1MUX | SNAPST | REFUP  | COMMBK |  ACCI  |  ACCI  |  ACCI  |
+
+## RDCFGB
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  |  Bit 3   |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:--------:|:-------:|:-------:|:-------:|
+|  CFGBR0  | OC1TEN | OC1TH  | OC1TH  | OC1TH  |  OC1TH   |  OC1TH  |  OC1TH  |  OC1TH  |
+|  CFGBR1  | OC2TEN | OC2TH  | OC2TH  | OC2TH  |  OC2TH   |  OC2TH  |  OC2TH  |  OC2TH  |
+|  CFGBR2  | OC3TEN | OC3TH  | OC3TH  | OC3TH  |  OC3TH   |  OC3TH  |  OC3TH  |  OC3TH  |
+|  CFGBR3  | OCTSEL | OCTSEL | REFTEN | RSVD0  |   OCDP   |  RSVD0  |  OCDGT  |  OCDGT  |
+|  CFGBR4  |  OCBX  |  OCAX  | OCMODE | OCMODE |  OC3GC   |  OC2GC  |  OC1GC  |   OCOD  |
+|  CFGBR5  | GPIO4C | GPIO3C | GPIO2C | GPIO1C | GPIO2EOC | DIAGSEL | DIAGSEL | DIAGSEL |
+
+## RDCVA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   IR0    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR1    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR2    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR3    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+|   IR4    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+|   IR5    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+
+## RDCVB
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+|         VBR2        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|         VBR3        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|         VBR4        |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |
+|         VBR5        |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |
+
+## RDCVC
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        IVBR0        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+|        IVBR1        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+|        IVBR2        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|        IVBR4        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|        IVBR5        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+
+## RDCVD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1AR0   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR1   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR2   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR3   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR4   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+|  V1AR5   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+
+## RDCVE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1BR0   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR1   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR2   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR3   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR4   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+|  V1BR5   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+
+## RDCVF
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  OVRIR0  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |
+|  OVRIR1  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |
+|  OVRIR2  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |
+|  OVRIR3  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |
+|  OVRIR4  | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX |
+|  OVRIR5  | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN |
+
+## RDACA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   IAR0   | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC |
+|   IAR1   | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC |
+|   IAR2   | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC |
+|   IAR3   | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC |
+|   IAR4   | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC |
+|   IAR5   | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC |
+
+## RDACB
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  VBAR0   | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  VBAR1   | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  VBAR2   | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  VBAR3   | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC |
+|  VBAR4   | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC |
+|  VBAR5   | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC |
+
+## RDACC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  IVBAR0  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  |
+|  IVBAR1  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  |
+|  IVBAR2  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  |
+|  IVBAR3  | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  IVBAR4  | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  IVBAR5  | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+
+## RDACD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1AR0   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR1   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR2   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR3   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR4   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+|  V1AR5   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+
+## RDACE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1BR0   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR1   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR2   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR3   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR4   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+|  V1BR5   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+
+## RDACF
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDSVA
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  V1CR0   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |
+|  V1CR1   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |
+|  V1CR2   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |
+|  V1CR3   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |
+|  V1CR4   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+|  V1CR5   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+
+## RDSVB
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  V2CR0   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |
+|  V2CR1   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |
+|  V2CR2   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2CR3   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2CR4   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+|  V2CR5   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+
+## RDSVC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V2AR0   |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |
+|  V2AR1   |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |
+|  V2AR2   |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |
+|  V2AR3   |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |
+|  V2AR4   |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |
+|  V2AR5   |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |
+
+## RDSVD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V2BR0   |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |
+|  V2BR1   |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |
+|  V2BR2   |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |
+|  V2BR3   |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |
+|  V2BR4   |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |
+|  V2BR5   |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |
+
+## RDSVE
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDSVF
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDFCA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   IR0    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR1    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR2    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR3    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+|   IR4    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+|   IR5    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+
+## RDFCB
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+|         VBR2        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|         VBR3        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|         VBR4        |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |
+|         VBR5        |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |
+
+## RDFCC
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        IVBR0        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+|        IVBR1        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+|        IVBR2        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|        IVBR4        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|        IVBR5        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+
+## RDFCD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1AR0   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR1   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR2   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR3   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR4   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+|  V1AR5   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+
+## RDFCE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1BR0   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR1   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR2   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR3   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR4   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+|  V1BR5   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+
+## RDFCF
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  OVRIR0  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |
+|  OVRIR1  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |
+|  OVRIR2  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |
+|  OVRIR3  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |
+|  OVRIR4  | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX |
+|  OVRIR5  | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN |
+
+## RDAUXA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1AR0   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR1   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR2   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR3   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR4   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+|  V1AR5   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+
+## RDAUXB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1BR0   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR1   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR2   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR3   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR4   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+|  V1BR5   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+
+## RDAUXC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1DR0   |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |
+|  V1DR1   |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |
+|  V1DR2   |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |
+|  V1DR3   |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |
+|  V1DR4   |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |
+|  V1DR5   |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |
+
+## RDAUXD
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  V2DR0   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2DR1   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2DR2   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+|  V2DR3   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+|  V2DR4   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+|  V2DR5   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+
+## RDAUXE
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDRAXA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V2AR0   |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |
+|  V2AR1   |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |
+|  V2AR2   |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |
+|  V2AR3   |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |
+|  V2AR4   |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |
+|  V2AR5   |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |
+
+## RDRAXB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V2BR0   |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |
+|  V2BR1   |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |
+|  V2BR2   |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |
+|  V2BR3   |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |
+|  V2BR4   |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |
+|  V2BR5   |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |
+
+## RDRAXC
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDRAXD
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        V2ER0        |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |
+|        V2ER1        |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+
+## RDSTATA
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5   |  Bit 4   |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+|  AUXAR0  | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 |
+|  AUXAR1  | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 |
+|  AUXAR2  |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |
+|  AUXAR3  |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |
+|  AUXAR4  |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |
+|  AUXAR5  |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |
+
+## RDSTATB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXBR0  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |
+|  AUXBR1  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |
+|  AUXBR2  |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |
+|  AUXBR3  |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |
+|  AUXBR4  |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |
+|  AUXBR5  |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |
+
+## RDSTATC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2 | Bit 1 | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:-----:|:-----:|:------:|
+|   CFD0   |  I1D   |  V1D   | VDRUV  |  OCMM  |  OC3L  | OCAGD |  OCAL |  OC1L  |
+|   CFD1   |  I2D   |  V2D   | VDDUV  | NOCLK  | REFFLT | OCBGD |  OCBL |  OC2L  |
+|   CFD2   | I2CNT  | I2CNT  | I2CNT  | I1CNT  | I1CNT  | I1CNT | I1CNT | I1CNT  |
+|   CFD3   | I1CNT  | I1CNT  | I1CNT  | I1CNT  | I1CNT  | I1CNT | I1PHA | I1PHA  |
+|   CFD4   | VREGOV | VREGUV | VDIGOV | VDIGUV |  SED1  |  MED1 |  SED2 |  MED2  |
+|   CFD5   |  VDEL  |  VDE   | RSVD0  | SPIFLT | RESET  |  THSD | TMODE | OSCFLT |
+
+## RDSTATD
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        AUXCR0       |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |
+|        AUXCR1       |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |
+|        AUXCR2       |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |
+|        AUXCR3       |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|        AUXCR5       |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |
+
+## RDSTATE
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|         STR0        |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |       OCBP      |       OCAP      |
+|         STR1        |      I2CAL      |      I1CAL      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |       DER       |       DER       |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|         STR3        |      GPO6H      |      GPO5H      |      GPO4H      |      GPO3H      |      GPO2H      |      GPO1H      |      GPO6L      |      GPO5L      |
+|         STR4        |      GPO4L      |      GPO3L      |      GPO2L      |      GPO1L      |      GPIO4L     |      GPIO3L     |      GPIO2L     |      GPIO1L     |
+|         STR5        |      REVID      |      REVID      |      REVID      |      REVID      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |
+
+## WRPWMA
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDPWMA
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## WRPWMB
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDPWMB
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## CMHB
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+
+## WRCMCFG
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDCMCFG
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## WRCMCELLT
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDCMCELLT
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## WRCMGPIOT
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDCMGPIOT
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## CLRCMFLAG
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+
+## RDCMFLAG
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## CLOVUV
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## WRCOMM
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  COMM0   | ICOM0 | ICOM0 | ICOM0 | ICOM0 | FCOM0 | FCOM0 | FCOM0 | FCOM0 |
+|  COMM1   |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |
+|  COMM2   | ICOM1 | ICOM1 | ICOM1 | ICOM1 | FCOM1 | FCOM1 | FCOM1 | FCOM1 |
+|  COMM3   |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |
+|  COMM4   | ICOM2 | ICOM2 | ICOM2 | ICOM2 | FCOM2 | FCOM2 | FCOM2 | FCOM2 |
+|  COMM5   |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |
+
+## RDCOMM
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  COMM0   | ICOM0 | ICOM0 | ICOM0 | ICOM0 | FCOM0 | FCOM0 | FCOM0 | FCOM0 |
+|  COMM1   |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |
+|  COMM2   | ICOM1 | ICOM1 | ICOM1 | ICOM1 | FCOM1 | FCOM1 | FCOM1 | FCOM1 |
+|  COMM3   |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |
+|  COMM4   | ICOM2 | ICOM2 | ICOM2 | ICOM2 | FCOM2 | FCOM2 | FCOM2 | FCOM2 |
+|  COMM5   |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |
+
+## RDSID
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SIDR0   |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+|  SIDR1   |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+|  SIDR2   |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+|  SIDR3   |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+|  SIDR4   |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+|  SIDR5   |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+
+## WRRR
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## RDRR
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+| Reserved Register 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 | Reserved Byte 4 |
+| Reserved Register 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 | Reserved Byte 5 |
+
+## CLRFLAG
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2 | Bit 1 | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:-----:|:-----:|:------:|
+|   CFD0   |  I1D   |  V1D   | VDRUV  |  OCMM  |  OC3L  | OCAGD |  OCAL |  OC1L  |
+|   CFD1   |  I2D   |  V2D   | VDDUV  | NOCLK  | REFFLT | OCBGD |  OCBL |  OC2L  |
+|   CFD2   | I2CNT  | I2CNT  | I2CNT  | I1CNT  | I1CNT  | I1CNT | I1CNT | I1CNT  |
+|   CFD3   | I1CNT  | I1CNT  | I1CNT  | I1CNT  | I1CNT  | I1CNT | I1PHA | I1PHA  |
+|   CFD4   | VREGOV | VREGUV | VDIGOV | VDIGUV |  SED1  |  MED1 |  SED2 |  MED2  |
+|   CFD5   |  VDEL  |  VDE   | RSVD0  | SPIFLT | RESET  |  THSD | TMODE | OSCFLT |
+
+## RDFLAG
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2 | Bit 1 | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:-----:|:-----:|:------:|
+|   CFD0   |  I1D   |  V1D   | VDRUV  |  OCMM  |  OC3L  | OCAGD |  OCAL |  OC1L  |
+|   CFD1   |  I2D   |  V2D   | VDDUV  | NOCLK  | REFFLT | OCBGD |  OCBL |  OC2L  |
+|   CFD2   | I2CNT  | I2CNT  | I2CNT  | I1CNT  | I1CNT  | I1CNT | I1CNT | I1CNT  |
+|   CFD3   | I1CNT  | I1CNT  | I1CNT  | I1CNT  | I1CNT  | I1CNT | I1PHA | I1PHA  |
+|   CFD4   | VREGOV | VREGUV | VDIGOV | VDIGUV |  SED1  |  MED1 |  SED2 |  MED2  |
+|   CFD5   |  VDEL  |  VDE   | RSVD0  | SPIFLT | RESET  |  THSD | TMODE | OSCFLT |
+
+## RDI
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   IR0    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR1    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR2    |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |   I1  |
+|   IR3    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+|   IR4    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+|   IR5    |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |   I2  |
+
+## RDIACC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   IAR0   | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC |
+|   IAR1   | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC |
+|   IAR2   | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC | I1ACC |
+|   IAR3   | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC |
+|   IAR4   | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC |
+|   IAR5   | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC | I2ACC |
+
+## RDIVB1
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        IVBR0        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+|        IVBR1        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+|        IVBR2        |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |        I1       |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|        IVBR4        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|        IVBR5        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+
+## RDIVB1ACC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  IVBAR0  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  |
+|  IVBAR1  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  |
+|  IVBAR2  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  | I1ACC  |
+|  IVBAR3  | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  IVBAR4  | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  IVBAR5  | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+
+## RDOC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  OVRIR0  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |  OC1R  |
+|  OVRIR1  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |  OC2R  |
+|  OVRIR2  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |  OC3R  |
+|  OVRIR3  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |  REFR  |
+|  OVRIR4  | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX | OC3MAX |
+|  OVRIR5  | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN | OC3MIN |
+
+## RDSTAT
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|         STR0        |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |       OCBP      |       OCAP      |
+|         STR1        |      I2CAL      |      I1CAL      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |       DER       |       DER       |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|         STR3        |      GPO6H      |      GPO5H      |      GPO4H      |      GPO3H      |      GPO2H      |      GPO1H      |      GPO6L      |      GPO5L      |
+|         STR4        |      GPO4L      |      GPO3L      |      GPO2L      |      GPO1L      |      GPIO4L     |      GPIO3L     |      GPIO2L     |      GPIO1L     |
+|         STR5        |      REVID      |      REVID      |      REVID      |      REVID      |      RSVD0      |      RSVD0      |      RSVD0      |      RSVD0      |
+
+## RDV1A
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1AR0   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR1   |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |  V1A  |
+|  V1AR2   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR3   |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |  V2A  |
+|  V1AR4   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+|  V1AR5   |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |  V3A  |
+
+## RDV1B
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1BR0   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR1   |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |  V4A  |
+|  V1BR2   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR3   |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |  V5A  |
+|  V1BR4   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+|  V1BR5   |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |  V6A  |
+
+## RDV1C
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  V1CR0   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |
+|  V1CR1   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |  V7A   |
+|  V1CR2   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |
+|  V1CR3   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |  V8A   |
+|  V1CR4   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+|  V1CR5   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+
+## RDV1D
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V1DR0   |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |
+|  V1DR1   |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |  V7A  |
+|  V1DR2   |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |
+|  V1DR3   |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |  V8A  |
+|  V1DR4   |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |
+|  V1DR5   |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |  V9B  |
+
+## RDV2A
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V2AR0   |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |
+|  V2AR1   |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |  V1B  |
+|  V2AR2   |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |
+|  V2AR3   |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |  V2B  |
+|  V2AR4   |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |
+|  V2AR5   |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |  V3B  |
+
+## RDV2B
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  V2BR0   |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |
+|  V2BR1   |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |  V4B  |
+|  V2BR2   |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |
+|  V2BR3   |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |  V5B  |
+|  V2BR4   |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |
+|  V2BR5   |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |  V6B  |
+
+## RDV2C
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  V2CR0   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |
+|  V2CR1   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |  V9B   |
+|  V2CR2   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2CR3   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2CR4   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+|  V2CR5   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+
+## RDV2D
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  V2DR0   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2DR1   |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |  V10B  |
+|  V2DR2   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+|  V2DR3   | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A | VREF2A |
+|  V2DR4   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+|  V2DR5   | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B | VREF2B |
+
+## RDV2E
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        V2ER0        |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |
+|        V2ER1        |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |       V10B      |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+| Reserved Register 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 | Reserved Byte 2 |
+| Reserved Register 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 | Reserved Byte 3 |
+
+## RDVB
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+| Reserved Register 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 | Reserved Byte 1 |
+|         VBR2        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|         VBR3        |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |       VB1       |
+|         VBR4        |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |
+|         VBR5        |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |       VB2       |
+
+## RDVBACC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  VBAR0   | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  VBAR1   | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  VBAR2   | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC | VB1ACC |
+|  VBAR3   | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC |
+|  VBAR4   | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC |
+|  VBAR5   | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC | VB2ACC |
+
+## RDXA
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5   |  Bit 4   |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+|  AUXAR0  | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 |
+|  AUXAR1  | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 | VREF1P25 |
+|  AUXAR2  |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |
+|  AUXAR3  |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |   TMP1   |
+|  AUXAR4  |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |
+|  AUXAR5  |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |   VREG   |
+
+## RDXB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXBR0  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |
+|  AUXBR1  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |  VDD  |
+|  AUXBR2  |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |
+|  AUXBR3  |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |  VDIG |
+|  AUXBR4  |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |
+|  AUXBR5  |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |  EPAD |
+
+## RDXC
+
+|       Register      |      Bit 7      |      Bit 6      |      Bit 5      |      Bit 4      |      Bit 3      |      Bit 2      |      Bit 1      |      Bit 0      |
+|:-------------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
+|        AUXCR0       |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |
+|        AUXCR1       |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |       VDIV      |
+|        AUXCR2       |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |
+|        AUXCR3       |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |       TMP2      |
+| Reserved Register 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 | Reserved Byte 0 |
+|        AUXCR5       |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |      OSCCNT     |
+

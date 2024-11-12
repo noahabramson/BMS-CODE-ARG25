@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timing Calculator &mdash; ADI_pyBMS 0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Application Notes" href="../../application-notes.html" />
+    <link rel="prev" title="Commandlist2Arduino Code converter" href="Commandlist2Arduino_Code_converter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ADI_pyBMS
+          </a>
+              <div class="version">
+                2.0.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user.html">User documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../download.html">How to get PyBMS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interfaces.html">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bms_ic.html">How to talk to a BMS IC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdp_k1_commands.html">SDP-K1 Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../saleae_logic_analyzer.html">Saleae Logic Analyzer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../advanced.html">Advanced Features</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Free_Running_Mode.html">Free Running Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Custom_Command.html">Custom Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Command_Counter.html">Command Counter Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Unique_data_to_multiple_devices.html">Unique data to multiple devices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Commandlist2Arduino_Code_converter.html">Commandlist2Arduino Code converter</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Timing Calculator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-does-it-work">How does it work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#additional-information">Additional information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../application-notes.html">Application Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ADI_pyBMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../user.html">User documentation</a> &raquo;</li>
+          <li><a href="../advanced.html">Advanced Features</a> &raquo;</li>
+      <li>Timing Calculator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user/advanced/Timing_Calculator.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="timing-calculator">
+<h1>Timing Calculator<a class="headerlink" href="#timing-calculator" title="Permalink to this heading"></a></h1>
+<p>Be aware, this function is still in alpha and will change in the future.</p>
+<p>This class makes sure it’s easy to get the timings of a command list. Instead of using an excel, you can simple run a few commands and you’ll get the timings.
+The only you have to do is, give some information on your system. The values you need to give (please put the time in uS) are:</p>
+<ul class="simple">
+<li><p>t_clk: 0.5 # 2MHz, clk period</p></li>
+<li><p>t5: 2 # CS Rising Edge to CS Falling Edge</p></li>
+<li><p>t6: 0.5 # SCK Rising edge to CS Rising Edge</p></li>
+<li><p>t7: 0.5 # CSB Falling Edge to SCK Rising Edge</p></li>
+<li><p>t_idle_between_bytes: 0.532 # Time between byte</p></li>
+<li><p>mcu_overhead: 2 # Time per transaction overhead</p></li>
+</ul>
+<p>Write these values in a file called <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> It is advices to keep this file in the same folder as your scratchpad, but you can keep it everywhere.
+You can also give a dict instead of a yaml file. All you have to do, is send a dict object with the values instead of the string of the path.</p>
+<section id="how-does-it-work">
+<h2>How does it work<a class="headerlink" href="#how-does-it-work" title="Permalink to this heading"></a></h2>
+<p>There are only two lines of code you need to do the timing calculation. First, you make the object and tell the object your configuration. In this case, you define the config via the config.yml file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tc</span> <span class="o">=</span> <span class="n">TimingCalculator</span><span class="p">(</span><span class="s1">&#39;config.yml&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you prefer the make a dict, it works like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tc</span> <span class="o">=</span> <span class="n">TimingCalculator</span><span class="p">(</span><span class="n">dict_with_timing_values</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Instead of using the running the command_list with <code class="docutils literal notranslate"><span class="pre">results</span> <span class="pre">=</span> <span class="pre">bms.run_generic_command_list(command_list,</span> <span class="pre">board_list)</span></code>, you run the following command with the following parameters:</p>
+<ul class="simple">
+<li><p>command_list, is the command_list as usual</p></li>
+<li><p>board_list, is the board_list as usual. For example <code class="docutils literal notranslate"><span class="pre">board_list</span> <span class="pre">=</span> <span class="pre">[{'Device':</span> <span class="pre">ADBMS6842}]</span></code></p></li>
+<li><p>‘result.csv’, the csv where the data will be stored. The function also returns a function dict with the result</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">tc</span><span class="o">.</span><span class="n">calculate_timings</span><span class="p">(</span><span class="n">command_list</span><span class="p">,</span> <span class="n">board_list</span><span class="p">,</span> <span class="s1">&#39;result.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this heading"></a></h2>
+<p>You can use mixed daisychains and multiple devices. Also, it is possible to use <code class="docutils literal notranslate"><span class="pre">DELAY_MS</span></code>, <code class="docutils literal notranslate"><span class="pre">DELAY_US</span></code> and <code class="docutils literal notranslate"><span class="pre">SPI_WAKEUP</span></code>.
+These three commands will influence the timing results.</p>
+<p>In case you don’t give <code class="docutils literal notranslate"><span class="pre">'result.csv'</span></code> as a string to the <code class="docutils literal notranslate"><span class="pre">calculate_timings</span></code> function, you will only get a dict as output.
+This can be useful in case you want to continue with these values</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Commandlist2Arduino_Code_converter.html" class="btn btn-neutral float-left" title="Commandlist2Arduino Code converter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../application-notes.html" class="btn btn-neutral float-right" title="Application Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Analog Devices Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

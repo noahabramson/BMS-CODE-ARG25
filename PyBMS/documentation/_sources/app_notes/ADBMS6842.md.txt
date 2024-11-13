@@ -1,0 +1,1806 @@
+# Commands ADBMS6842
+
+## RDSGCA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SGCAR0  |  RSVD |  RSVD |  SGC1 |  SGC1 |  SGC1 |  SGC1 |  SGC1 |  SGC1 |
+|  SGCAR1  |  RSVD |  RSVD |  SGC2 |  SGC2 |  SGC2 |  SGC2 |  SGC2 |  SGC2 |
+|  SGCAR2  |  RSVD |  RSVD |  SGC3 |  SGC3 |  SGC3 |  SGC3 |  SGC3 |  SGC3 |
+|  SGCAR3  |  RSVD |  RSVD |  SGC4 |  SGC4 |  SGC4 |  SGC4 |  SGC4 |  SGC4 |
+|  SGCAR4  |  RSVD |  RSVD |  SGC5 |  SGC5 |  SGC5 |  SGC5 |  SGC5 |  SGC5 |
+|  SGCAR5  |  RSVD |  RSVD |  SGC6 |  SGC6 |  SGC6 |  SGC6 |  SGC6 |  SGC6 |
+
+## RDSGCB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SGCBR0  |  RSVD |  RSVD |  SGC7 |  SGC7 |  SGC7 |  SGC7 |  SGC7 |  SGC7 |
+|  SGCBR1  |  RSVD |  RSVD |  SGC8 |  SGC8 |  SGC8 |  SGC8 |  SGC8 |  SGC8 |
+|  SGCBR2  |  RSVD |  RSVD |  SGC9 |  SGC9 |  SGC9 |  SGC9 |  SGC9 |  SGC9 |
+|  SGCBR3  |  RSVD |  RSVD | SGC10 | SGC10 | SGC10 | SGC10 | SGC10 | SGC10 |
+|  SGCBR4  |  RSVD |  RSVD | SGC11 | SGC11 | SGC11 | SGC11 | SGC11 | SGC11 |
+|  SGCBR5  |  RSVD |  RSVD | SGC12 | SGC12 | SGC12 | SGC12 | SGC12 | SGC12 |
+
+## RDSGCC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SGCCR0  |  RSVD |  RSVD | SGC13 | SGC13 | SGC13 | SGC13 | SGC13 | SGC13 |
+|  SGCCR1  |  RSVD |  RSVD | SGC14 | SGC14 | SGC14 | SGC14 | SGC14 | SGC14 |
+|  SGCCR2  |  RSVD |  RSVD | SGC15 | SGC15 | SGC15 | SGC15 | SGC15 | SGC15 |
+|  SGCCR3  |  RSVD |  RSVD | SGC16 | SGC16 | SGC16 | SGC16 | SGC16 | SGC16 |
+|  SGCCR4  |  RSVD |  RSVD | SGC17 | SGC17 | SGC17 | SGC17 | SGC17 | SGC17 |
+|  SGCCR5  |  RSVD |  RSVD | SGC18 | SGC18 | SGC18 | SGC18 | SGC18 | SGC18 |
+
+## RDSGCD
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEISGC
+
+| Register | Bit 7 | Bit 6 | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:-----:|:-----:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EISGCR0  |  RSVD |  RSVD | EIS1GC | EIS1GC | EIS1GC | EIS1GC | EIS1GC | EIS1GC |
+| EISGCR1  |  RSVD |  RSVD | EIS2GC | EIS2GC | EIS2GC | EIS2GC | EIS2GC | EIS2GC |
+| EISGCR2  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+| EISGCR3  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+| EISGCR4  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+| EISGCR5  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+
+## RDACA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACAR0   |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |
+|  ACAR1   |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |
+|  ACAR2   |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |
+|  ACAR3   |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |
+|  ACAR4   |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |
+|  ACAR5   |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |
+
+## RDACB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACBR0   |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |
+|  ACBR1   |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |
+|  ACBR2   |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |
+|  ACBR3   |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |
+|  ACBR4   |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |
+|  ACBR5   |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |
+
+## RDACC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACCR0   |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |
+|  ACCR1   |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |
+|  ACCR2   |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |
+|  ACCR3   |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |
+|  ACCR4   |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |
+|  ACCR5   |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |
+
+## RDACD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACDR0   | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V |
+|  ACDR1   | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V |
+|  ACDR2   | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V |
+|  ACDR3   | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V |
+|  ACDR4   | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V |
+|  ACDR5   | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V |
+
+## RDACE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACER0   | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V |
+|  ACER1   | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V |
+|  ACER2   | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V |
+|  ACER3   | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V |
+|  ACER4   | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V |
+|  ACER5   | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V |
+
+## RDACF
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACFR0   | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V |
+|  ACFR1   | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V |
+|  ACFR2   | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V |
+|  ACFR3   | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V |
+|  ACFR4   | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V |
+|  ACFR5   | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V |
+
+## RDACG
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDACH
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUX2D
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUX2E
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUX2F
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUX2G
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUX2H
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUXA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXAR0  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |
+|  AUXAR1  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |  G1V  |
+|  AUXAR2  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |
+|  AUXAR3  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |  G2V  |
+|  AUXAR4  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |
+|  AUXAR5  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |  G3V  |
+
+## RDAUXB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXBR0  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |
+|  AUXBR1  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |  G4V  |
+|  AUXBR2  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |
+|  AUXBR3  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |  G5V  |
+|  AUXBR4  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |
+|  AUXBR5  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |  G6V  |
+
+## RDAUXC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXCR0  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |
+|  AUXCR1  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |
+|  AUXCR2  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |
+|  AUXCR3  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |
+|  AUXCR4  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |
+|  AUXCR5  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |
+
+## RDAUXD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXDR0  |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |
+|  AUXDR1  |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |
+|  AUXDR2  |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |
+|  AUXDR3  |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |
+|  AUXDR4  |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |
+|  AUXDR5  |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |
+
+## RDAUXE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXER0  |  G13V |  G13V |  G13V |  G13V |  G13V |  G13V |  G13V |  G13V |
+|  AUXER1  |  G13V |  G13V |  G13V |  G13V |  G13V |  G13V |  G13V |  G13V |
+|  AUXER2  |  G14V |  G14V |  G14V |  G14V |  G14V |  G14V |  G14V |  G14V |
+|  AUXER3  |  G14V |  G14V |  G14V |  G14V |  G14V |  G14V |  G14V |  G14V |
+|  AUXER4  | GA15V | GA15V | GA15V | GA15V | GA15V | GA15V | GA15V | GA15V |
+|  AUXER5  | GA15V | GA15V | GA15V | GA15V | GA15V | GA15V | GA15V | GA15V |
+
+## RDAUXF
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXFR0  | GA16V | GA16V | GA16V | GA16V | GA16V | GA16V | GA16V | GA16V |
+|  AUXFR1  | GA16V | GA16V | GA16V | GA16V | GA16V | GA16V | GA16V | GA16V |
+|  AUXFR2  |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |
+|  AUXFR3  |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |
+|  AUXFR4  |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |
+|  AUXFR5  |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |
+
+## RDAUXG
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUXH
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDAUXX
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXXR0  | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 |
+|  AUXXR1  | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 |
+|  AUXXR2  |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |
+|  AUXXR3  |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |
+|  AUXXR4  |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |
+|  AUXXR5  |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |
+
+## RDAUXY
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXYR0  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |
+|  AUXYR1  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |
+|  AUXYR2  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |
+|  AUXYR3  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |
+|  AUXYR4  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |
+|  AUXYR5  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |
+
+## RDAUXZ
+
+| Register |   Bit 7    |   Bit 6    |   Bit 5    |   Bit 4    |   Bit 3    |   Bit 2    |   Bit 1    |   Bit 0    |
+|:--------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+|  AUXZR0  |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |
+|  AUXZR1  |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |
+|  AUXZR2  |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |
+|  AUXZR3  |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |
+|  AUXZR4  | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 |
+|  AUXZR5  | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 |
+
+## RDCFGA
+
+| Register | Bit 7  |  Bit 6  | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 |  Bit 0   |
+|:--------:|:------:|:-------:|:-----:|:-----:|:-----:|:-----:|:-----:|:--------:|
+|  CFGAR0  | REFON  | COMM_BK |   FC  |   FC  |   FC  |  CTH  |  CTH  |   CTH    |
+|  CFGAR1  | RSVD0  |  RSVD0  | RSVD0 | RSVD0 | RSVD0 | RSVD0 | RSVD0 | IIR_MODE |
+|  CFGAR2  | SOAKON |  OWRNG  |  OWA  |  OWA  |  OWA  | RSVD0 | RSVD0 |  RSVD0   |
+|  CFGAR3  | RSVD1  |  RSVD1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  RSVD1   |
+|  CFGAR4  | RSVD1  |  RSVD1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  RSVD1   |
+|  CFGAR5  | RSVD1  |  RSVD1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  RSVD1   |
+
+## RDCFGB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 |   Bit 1    |   Bit 0   |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:----------:|:---------:|
+|  CFGBR0  | RSVD0 | RSVD0 | RSVD0 | RSVD0 | ISHSP | ISHSP | ALTGNDAUX2 | ALTGNDAUX |
+|  CFGBR1  | RSVD0 | RSVD0 | RSVD0 | RSVD0 | RSVD0 | RSVD0 |   RSVD0    |   RSVD0   |
+|  CFGBR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+|  CFGBR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+|  CFGBR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+|  CFGBR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+
+## RDCFGC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGCR0  |  GPI8 |  GPI7 |  GPI6 |  GPI5 |  GPI4 |  GPI3 |  GPI2 |  GPI1 |
+|  CFGCR1  | RSVD1 | RSVD1 | GPI14 | GPI13 | GPI12 | GPI11 | GPI10 |  GPI9 |
+|  CFGCR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGCR3  |  GPO8 |  GPO7 |  GPO6 |  GPO5 |  GPO4 |  GPO3 |  GPO2 |  GPO1 |
+|  CFGCR4  | RSVD1 | RSVD1 | GPO14 | GPO13 | GPO12 | GPO11 | GPO10 |  GPO9 |
+|  CFGCR5  | PPDRV | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDCFGD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGDR0  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGDR1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGDR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGDR3  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |
+|  CFGDR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  VUV  |  VUV  |  VUV  |  VUV  |
+|  CFGDR5  | DTMEN | DTRNG |  DCTO |  DCTO |  DCTO |  DCTO |  DCTO |  DCTO |
+
+## RDCFGE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGER0  |  PWM2 |  PWM2 |  PWM2 |  PWM2 |  PWM1 |  PWM1 |  PWM1 |  PWM1 |
+|  CFGER1  |  PWM4 |  PWM4 |  PWM4 |  PWM4 |  PWM3 |  PWM3 |  PWM3 |  PWM3 |
+|  CFGER2  |  PWM6 |  PWM6 |  PWM6 |  PWM6 |  PWM5 |  PWM5 |  PWM5 |  PWM5 |
+|  CFGER3  |  PWM8 |  PWM8 |  PWM8 |  PWM8 |  PWM7 |  PWM7 |  PWM7 |  PWM7 |
+|  CFGER4  | PWM10 | PWM10 | PWM10 | PWM10 |  PWM9 |  PWM9 |  PWM9 |  PWM9 |
+|  CFGER5  | PWM12 | PWM12 | PWM12 | PWM12 | PWM11 | PWM11 | PWM11 | PWM11 |
+
+## RDCFGF
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|       CFGFR0      | PWM14 | PWM14 | PWM14 | PWM14 | PWM13 | PWM13 | PWM13 | PWM13 |
+|       CFGFR1      | PWM16 | PWM16 | PWM16 | PWM16 | PWM15 | PWM15 | PWM15 | PWM15 |
+|       CFGFR2      | PWM18 | PWM18 | PWM18 | PWM18 | PWM17 | PWM17 | PWM17 | PWM17 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDCFGG
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGGR0  | ICOM0 | ICOM0 | ICOM0 | ICOM0 | FCOM0 | FCOM0 | FCOM0 | FCOM0 |
+|  CFGGR1  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |
+|  CFGGR2  | ICOM1 | ICOM1 | ICOM1 | ICOM1 | FCOM1 | FCOM1 | FCOM1 | FCOM1 |
+|  CFGGR3  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |
+|  CFGGR4  | ICOM2 | ICOM2 | ICOM2 | ICOM2 | FCOM2 | FCOM2 | FCOM2 | FCOM2 |
+|  CFGGR5  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |
+
+## RDCFGH
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5   |  Bit 4   |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+|  CFGHR0  | CMC_MAN  | CMC_MPER | CMC_MPER | CMC_MPER | CMC_BTM  | CMC_TPER | CMC_TPER | CMC_TPER |
+|  CFGHR1  | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV |
+|  CFGHR2  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   | CMC_DIR  | CMC_GOE  | CMC_GOE  | CMC_GOE  |
+|  CFGHR3  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |
+|  CFGHR4  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |
+|  CFGHR5  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |
+
+## RDCFGI
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGIR0  | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C |
+|  CFGIR1  | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C |
+|  CFGIR2  | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C |
+|  CFGIR3  | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G |
+|  CFGIR4  | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G |
+|  CFGIR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDCFGJ
+
+| Register |  Bit 7  |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  CFGJR0  | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV |
+|  CFGJR1  | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV |
+|  CFGJR2  | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV |
+|  CFGJR3  | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV |
+|  CFGJR4  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV |
+|  CFGJR5  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+
+## RDCFGK
+
+| Register |  Bit 7  |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  CFGKR0  | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV |
+|  CFGKR1  | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV |
+|  CFGKR2  | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV |
+|  CFGKR3  | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV |
+|  CFGKR4  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV |
+|  CFGKR5  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+
+## RDCFGL
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGLR0  | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 |
+|  CFGLR1  | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 |
+|  CFGLR2  | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 |
+|  CFGLR3  | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 |
+|  CFGLR4  | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 |
+|  CFGLR5  | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 |
+
+## RDCFGM
+
+| Register |  Bit 7  |  Bit 6  |     Bit 5     |     Bit 4     |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:-------:|:-------:|:-------------:|:-------------:|:--------:|:--------:|:--------:|:--------:|
+|  CFGMR0  |  EIS_N  |  EIS_N  |     EIS_N     |     EIS_N     |  EIS_N   |  EIS_N   |  EIS_N   |  EIS_N   |
+|  CFGMR1  |  RSVD0  |  RSVD0  |     RSVD0     |     EIS_N     |  EIS_N   |  EIS_N   |  EIS_N   |  EIS_N   |
+|  CFGMR2  |  EIS_ST | EIS_DRV | EIS_CURR_MEAS | EIS_CURR_MEAS | EIS_SOAK | EIS_SOAK | EIS_SOAK | EIS_SOAK |
+|  CFGMR3  | EIS_OSR | EIS_OSR |    EIS_OSR    |    EIS_OSR    | EIS_OSR  | EIS_OSR  | EIS_OSR  | EIS_OSR  |
+|  CFGMR4  | EIS_OSR | EIS_OSR |    EIS_OSR    |    EIS_OSR    | EIS_OSR  | EIS_OSR  | EIS_OSR  | EIS_OSR  |
+|  CFGMR5  |  RSVD0  |  RSVD0  |     RSVD0     |     RSVD0     |  RSVD0   |  RSVD0   | EIS_OSR  | EIS_OSR  |
+
+## RDCFGN
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGNR0  |  DCC8 |  DCC7 |  DCC6 |  DCC5 |  DCC4 |  DCC3 |  DCC2 |  DCC1 |
+|  CFGNR1  | DCC16 | DCC15 | DCC14 | DCC13 | DCC12 | DCC11 | DCC10 |  DCC9 |
+|  CFGNR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | DCC18 | DCC17 |
+|  CFGNR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGNR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGNR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDCFGO
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  CFGOR0  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR1  | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D |
+|  CFGOR2  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR3  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR4  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR5  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+
+## RDCFGP
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGPR0  |  SEED |  SEED |  SEED |  SEED |  SEED |  SEED |  SEED |  SEED |
+|  CFGPR1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  SEED |  SEED |
+|  CFGPR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGPR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGPR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGPR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDCVA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVAR0   |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |
+|  CVAR1   |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |
+|  CVAR2   |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |
+|  CVAR3   |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |
+|  CVAR4   |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |
+|  CVAR5   |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |
+
+## RDCVB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVBR0   |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |
+|  CVBR1   |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |
+|  CVBR2   |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |
+|  CVBR3   |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |
+|  CVBR4   |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |
+|  CVBR5   |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |
+
+## RDCVC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVCR0   |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |
+|  CVCR1   |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |
+|  CVCR2   |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |
+|  CVCR3   |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |
+|  CVCR4   |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |
+|  CVCR5   |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |
+
+## RDCVD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVDR0   |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |
+|  CVDR1   |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |
+|  CVDR2   |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |
+|  CVDR3   |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |
+|  CVDR4   |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |
+|  CVDR5   |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |
+
+## RDCVE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVER0   |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |
+|  CVER1   |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |
+|  CVER2   |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |
+|  CVER3   |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |
+|  CVER4   |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |
+|  CVER5   |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |
+
+## RDCVF
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVFR0   |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |
+|  CVFR1   |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |
+|  CVFR2   |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |
+|  CVFR3   |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |
+|  CVFR4   |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |
+|  CVFR5   |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |
+
+## RDCVG
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDCVH
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDDELA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  DELAR0  | DEL1V | DEL1V | DEL1V | DEL1V | DEL1V | DEL1V | DEL1V | DEL1V |
+|  DELAR1  | DEL2V | DEL2V | DEL2V | DEL2V | DEL2V | DEL2V | DEL2V | DEL2V |
+|  DELAR2  | DEL3V | DEL3V | DEL3V | DEL3V | DEL3V | DEL3V | DEL3V | DEL3V |
+|  DELAR3  | DEL4V | DEL4V | DEL4V | DEL4V | DEL4V | DEL4V | DEL4V | DEL4V |
+|  DELAR4  | DEL5V | DEL5V | DEL5V | DEL5V | DEL5V | DEL5V | DEL5V | DEL5V |
+|  DELAR5  | DEL6V | DEL6V | DEL6V | DEL6V | DEL6V | DEL6V | DEL6V | DEL6V |
+
+## RDDELB
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  DELBR0  | DEL7V  | DEL7V  | DEL7V  | DEL7V  | DEL7V  | DEL7V  | DEL7V  | DEL7V  |
+|  DELBR1  | DEL8V  | DEL8V  | DEL8V  | DEL8V  | DEL8V  | DEL8V  | DEL8V  | DEL8V  |
+|  DELBR2  | DEL9V  | DEL9V  | DEL9V  | DEL9V  | DEL9V  | DEL9V  | DEL9V  | DEL9V  |
+|  DELBR3  | DEL10V | DEL10V | DEL10V | DEL10V | DEL10V | DEL10V | DEL10V | DEL10V |
+|  DELBR4  | DEL11V | DEL11V | DEL11V | DEL11V | DEL11V | DEL11V | DEL11V | DEL11V |
+|  DELBR5  | DEL12V | DEL12V | DEL12V | DEL12V | DEL12V | DEL12V | DEL12V | DEL12V |
+
+## RDDELC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  DELCR0  | DEL13V | DEL13V | DEL13V | DEL13V | DEL13V | DEL13V | DEL13V | DEL13V |
+|  DELCR1  | DEL14V | DEL14V | DEL14V | DEL14V | DEL14V | DEL14V | DEL14V | DEL14V |
+|  DELCR2  | DEL15V | DEL15V | DEL15V | DEL15V | DEL15V | DEL15V | DEL15V | DEL15V |
+|  DELCR3  | DEL16V | DEL16V | DEL16V | DEL16V | DEL16V | DEL16V | DEL16V | DEL16V |
+|  DELCR4  | DEL17V | DEL17V | DEL17V | DEL17V | DEL17V | DEL17V | DEL17V | DEL17V |
+|  DELCR5  | DEL18V | DEL18V | DEL18V | DEL18V | DEL18V | DEL18V | DEL18V | DEL18V |
+
+## RDDELD
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDI
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVAR0   |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |
+|  CVAR1   |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |  C1V  |
+|  CVAR2   |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |
+|  CVAR3   |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |  C2V  |
+|  CVAR4   |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |
+|  CVAR5   |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |  C3V  |
+
+## RDVB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVBR0   |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |
+|  CVBR1   |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |  C4V  |
+|  CVBR2   |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |
+|  CVBR3   |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |  C5V  |
+|  CVBR4   |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |
+|  CVBR5   |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |  C6V  |
+
+## RDIVB1
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVCR0   |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |
+|  CVCR1   |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |  C7V  |
+|  CVCR2   |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |
+|  CVCR3   |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |  C8V  |
+|  CVCR4   |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |
+|  CVCR5   |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |  C9V  |
+
+## RDV1A
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVDR0   |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |
+|  CVDR1   |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |  C10V |
+|  CVDR2   |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |
+|  CVDR3   |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |  C11V |
+|  CVDR4   |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |
+|  CVDR5   |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |  C12V |
+
+## RDV1B
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVER0   |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |
+|  CVER1   |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |  C13V |
+|  CVER2   |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |
+|  CVER3   |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |  C14V |
+|  CVER4   |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |
+|  CVER5   |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |  C15V |
+
+## RDOC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CVFR0   |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |
+|  CVFR1   |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |  C16V |
+|  CVFR2   |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |
+|  CVFR3   |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |  C17V |
+|  CVFR4   |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |
+|  CVFR5   |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |  C18V |
+
+## RDIACC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACAR0   |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |
+|  ACAR1   |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |
+|  ACAR2   |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |
+|  ACAR3   |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |
+|  ACAR4   |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |
+|  ACAR5   |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |
+
+## RDVBACC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACBR0   |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |
+|  ACBR1   |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |
+|  ACBR2   |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |
+|  ACBR3   |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |
+|  ACBR4   |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |
+|  ACBR5   |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |
+
+## RDIVB1ACC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACCR0   |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |
+|  ACCR1   |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |
+|  ACCR2   |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |
+|  ACCR3   |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |
+|  ACCR4   |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |
+|  ACCR5   |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |
+
+## RDOCMMA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACER0   | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V |
+|  ACER1   | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V |
+|  ACER2   | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V |
+|  ACER3   | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V |
+|  ACER4   | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V |
+|  ACER5   | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V |
+
+## RDOCMMB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  ACFR0   | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V |
+|  ACFR1   | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V |
+|  ACFR2   | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V |
+|  ACFR3   | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V |
+|  ACFR4   | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V |
+|  ACFR5   | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V |
+
+## RDV1C
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVAR0   |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |
+|  SVAR1   |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |
+|  SVAR2   |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |
+|  SVAR3   |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |
+|  SVAR4   |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |
+|  SVAR5   |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |
+
+## RDV2C
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVBR0   |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |
+|  SVBR1   |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |
+|  SVBR2   |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |
+|  SVBR3   |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |
+|  SVBR4   |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |
+|  SVBR5   |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |
+
+## RDV2A
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVCR0   |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |
+|  SVCR1   |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |
+|  SVCR2   |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |
+|  SVCR3   |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |
+|  SVCR4   |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |
+|  SVCR5   |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |
+
+## RDV2B
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVDR0   |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |
+|  SVDR1   |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |
+|  SVDR2   |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |
+|  SVDR3   |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |
+|  SVDR4   |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |
+|  SVDR5   |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |
+
+## RDV1D
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXCR0  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |
+|  AUXCR1  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |  G7V  |
+|  AUXCR2  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |
+|  AUXCR3  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |  G8V  |
+|  AUXCR4  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |
+|  AUXCR5  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |  G9V  |
+
+## RDV2D
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXDR0  |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |
+|  AUXDR1  |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |  G10V |
+|  AUXDR2  |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |
+|  AUXDR3  |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |  G11V |
+|  AUXDR4  |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |
+|  AUXDR5  |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |  G12V |
+
+## RDXA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXXR0  | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 |
+|  AUXXR1  | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 | VREF2 |
+|  AUXXR2  |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |
+|  AUXXR3  |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |  ITMP |
+|  AUXXR4  |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |
+|  AUXXR5  |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |  VRES |
+
+## RDXB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  AUXYR0  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |
+|  AUXYR1  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |   VD  |
+|  AUXYR2  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |
+|  AUXYR3  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |   VA  |
+|  AUXYR4  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |
+|  AUXYR5  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |  VMV  |
+
+## RDXC
+
+| Register |   Bit 7    |   Bit 6    |   Bit 5    |   Bit 4    |   Bit 3    |   Bit 2    |   Bit 1    |   Bit 0    |
+|:--------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+|  AUXZR0  |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |
+|  AUXZR1  |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |    VPV     |
+|  AUXZR2  |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |
+|  AUXZR3  |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |    RSVD    |
+|  AUXZR4  | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 |
+|  AUXZR5  | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 | VREF1_AUX2 |
+
+## RDEISC
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EISGAR0  | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI |
+| EISGAR1  | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI |
+| EISGAR2  | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI |
+| EISGAR3  | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ |
+| EISGAR4  | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ |
+| EISGAR5  | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ |
+
+## RDEISV
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EISGBR0  | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI |
+| EISGBR1  | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI |
+| EISGBR2  | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI |
+| EISGBR3  | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ |
+| EISGBR4  | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ |
+| EISGBR5  | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ |
+
+## RDEIS1
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS1R0  | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I |
+|  EIS1R1  | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I |
+|  EIS1R2  | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I | EIS1I |
+|  EIS1R3  | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q |
+|  EIS1R4  | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q |
+|  EIS1R5  | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q | EIS1Q |
+
+## RDEIS10
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS10R0  | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I |
+| EIS10R1  | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I |
+| EIS10R2  | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I | EIS10I |
+| EIS10R3  | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q |
+| EIS10R4  | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q |
+| EIS10R5  | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q | EIS10Q |
+
+## RDEIS11
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS11R0  | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I |
+| EIS11R1  | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I |
+| EIS11R2  | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I | EIS11I |
+| EIS11R3  | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q |
+| EIS11R4  | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q |
+| EIS11R5  | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q | EIS11Q |
+
+## RDEIS12
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS12R0  | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I |
+| EIS12R1  | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I |
+| EIS12R2  | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I | EIS12I |
+| EIS12R3  | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q |
+| EIS12R4  | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q |
+| EIS12R5  | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q | EIS12Q |
+
+## RDEIS13
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS13R0  | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I |
+| EIS13R1  | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I |
+| EIS13R2  | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I | EIS13I |
+| EIS13R3  | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q |
+| EIS13R4  | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q |
+| EIS13R5  | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q | EIS13Q |
+
+## RDEIS14
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS14R0  | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I |
+| EIS14R1  | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I |
+| EIS14R2  | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I | EIS14I |
+| EIS14R3  | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q |
+| EIS14R4  | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q |
+| EIS14R5  | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q | EIS14Q |
+
+## RDEIS15
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS15R0  | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I |
+| EIS15R1  | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I |
+| EIS15R2  | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I | EIS15I |
+| EIS15R3  | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q |
+| EIS15R4  | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q |
+| EIS15R5  | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q | EIS15Q |
+
+## RDEIS16
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS16R0  | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I |
+| EIS16R1  | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I |
+| EIS16R2  | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I | EIS16I |
+| EIS16R3  | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q |
+| EIS16R4  | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q |
+| EIS16R5  | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q | EIS16Q |
+
+## RDEIS17
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS17R0  | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I |
+| EIS17R1  | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I |
+| EIS17R2  | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I | EIS17I |
+| EIS17R3  | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q |
+| EIS17R4  | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q |
+| EIS17R5  | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q | EIS17Q |
+
+## RDEIS18
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EIS18R0  | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I |
+| EIS18R1  | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I |
+| EIS18R2  | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I | EIS18I |
+| EIS18R3  | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q |
+| EIS18R4  | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q |
+| EIS18R5  | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q | EIS18Q |
+
+## RDEIS19
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEIS2
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS2R0  | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I |
+|  EIS2R1  | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I |
+|  EIS2R2  | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I | EIS2I |
+|  EIS2R3  | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q |
+|  EIS2R4  | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q |
+|  EIS2R5  | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q | EIS2Q |
+
+## RDEIS20
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEIS21
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEIS22
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEIS23
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEIS24
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDEIS3
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS3R0  | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I |
+|  EIS3R1  | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I |
+|  EIS3R2  | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I | EIS3I |
+|  EIS3R3  | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q |
+|  EIS3R4  | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q |
+|  EIS3R5  | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q | EIS3Q |
+
+## RDEIS4
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS4R0  | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I |
+|  EIS4R1  | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I |
+|  EIS4R2  | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I | EIS4I |
+|  EIS4R3  | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q |
+|  EIS4R4  | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q |
+|  EIS4R5  | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q | EIS4Q |
+
+## RDEIS5
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS5R0  | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I |
+|  EIS5R1  | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I |
+|  EIS5R2  | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I | EIS5I |
+|  EIS5R3  | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q |
+|  EIS5R4  | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q |
+|  EIS5R5  | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q | EIS5Q |
+
+## RDEIS6
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS6R0  | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I |
+|  EIS6R1  | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I |
+|  EIS6R2  | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I | EIS6I |
+|  EIS6R3  | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q |
+|  EIS6R4  | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q |
+|  EIS6R5  | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q | EIS6Q |
+
+## RDEIS7
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS7R0  | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I |
+|  EIS7R1  | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I |
+|  EIS7R2  | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I | EIS7I |
+|  EIS7R3  | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q |
+|  EIS7R4  | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q |
+|  EIS7R5  | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q | EIS7Q |
+
+## RDEIS8
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS8R0  | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I |
+|  EIS8R1  | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I |
+|  EIS8R2  | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I | EIS8I |
+|  EIS8R3  | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q |
+|  EIS8R4  | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q |
+|  EIS8R5  | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q | EIS8Q |
+
+## RDEIS9
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  EIS9R0  | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I |
+|  EIS9R1  | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I |
+|  EIS9R2  | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I | EIS9I |
+|  EIS9R3  | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q |
+|  EIS9R4  | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q |
+|  EIS9R5  | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q | EIS9Q |
+
+## RDEISGA
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EISGAR0  | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI |
+| EISGAR1  | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI |
+| EISGAR2  | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI | EISGAI |
+| EISGAR3  | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ |
+| EISGAR4  | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ |
+| EISGAR5  | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ | EISGAQ |
+
+## RDEISGB
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EISGBR0  | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI |
+| EISGBR1  | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI |
+| EISGBR2  | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI | EISGBI |
+| EISGBR3  | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ |
+| EISGBR4  | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ |
+| EISGBR5  | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ | EISGBQ |
+
+## RDFCA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  FCAR0   |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |
+|  FCAR1   |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |  FC1V |
+|  FCAR2   |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |
+|  FCAR3   |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |  FC2V |
+|  FCAR4   |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |
+|  FCAR5   |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |  FC3V |
+
+## RDFCB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  FCBR0   |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |
+|  FCBR1   |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |  FC4V |
+|  FCBR2   |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |
+|  FCBR3   |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |  FC5V |
+|  FCBR4   |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |
+|  FCBR5   |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |  FC6V |
+
+## RDFCC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  FCCR0   |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |
+|  FCCR1   |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |  FC7V |
+|  FCCR2   |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |
+|  FCCR3   |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |  FC8V |
+|  FCCR4   |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |
+|  FCCR5   |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |  FC9V |
+
+## RDFCD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  FCDR0   | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V |
+|  FCDR1   | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V | FC10V |
+|  FCDR2   | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V |
+|  FCDR3   | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V | FC11V |
+|  FCDR4   | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V |
+|  FCDR5   | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V | FC12V |
+
+## RDFCE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  FCER0   | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V |
+|  FCER1   | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V | FC13V |
+|  FCER2   | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V |
+|  FCER3   | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V | FC14V |
+|  FCER4   | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V |
+|  FCER5   | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V | FC15V |
+
+## RDFCF
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  FCFR0   | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V |
+|  FCFR1   | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V | FC16V |
+|  FCFR2   | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V |
+|  FCFR3   | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V | FC17V |
+|  FCFR4   | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V |
+|  FCFR5   | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V | FC18V |
+
+## RDFCG
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDFCH
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDFLAGA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4  | Bit 3 | Bit 2 |  Bit 1  | Bit 0  |
+|:--------:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|:-------:|:------:|
+| FLAGAR0  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  RSVD1  | RSVD1  |
+| FLAGAR1  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  RSVD1  | RSVD1  |
+| FLAGAR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  RSVD1  | RSVD1  |
+| FLAGAR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  VA_UV2 | REF_UV |
+| FLAGAR4  | VA_OV | VA_UV | VD_OV | VD_UV  |  CED  |  CMED |   SED   |  SMED  |
+| FLAGAR5  |  VDEL |  VDE  | NOCLK | SPIFLT | SLEEP |  THSD | TMODCHK | OSCCHK |
+
+## RDFLAGB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| FLAGBR0  |  C8UV |  C7UV |  C6UV |  C5UV |  C4UV |  C3UV |  C2UV |  C1UV |
+| FLAGBR1  | C16UV | C15UV | C14UV | C13UV | C12UV | C11UV | C10UV |  C9UV |
+| FLAGBR2  |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD | C18UV | C17UV |
+| FLAGBR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| FLAGBR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| FLAGBR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDFLAGC
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5  |  Bit 4  |  Bit 3   |  Bit 2   |   Bit 1   |   Bit 0    |
+|:--------:|:--------:|:--------:|:-------:|:-------:|:--------:|:--------:|:---------:|:----------:|
+| FLAGCR0  | CMF_GDVP | CMF_GDVN | CMF_GOV | CMF_GUV | CMF_CDVP | CMF_CDVN |  CMF_COV  |  CMF_CUV   |
+| FLAGCR1  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   | CMF_BTMTO | CMF_BTMCMP |
+| FLAGCR2  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+| FLAGCR3  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+| FLAGCR4  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+| FLAGCR5  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+
+## RDFLAGD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4  | Bit 3 | Bit 2 |  Bit 1  | Bit 0  |
+|:--------:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|:-------:|:------:|
+| FLAGDR0  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  RSVD0  | RSVD0  |
+| FLAGDR1  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  RSVD0  | RSVD0  |
+| FLAGDR2  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  RSVD0  | RSVD0  |
+| FLAGDR3  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  VA_UV2 | REF_UV |
+| FLAGDR4  | VA_OV | VA_UV | VD_OV | VD_UV  |  CED  |  CMED |   SED   |  SMED  |
+| FLAGDR5  |  VDEL |  VDE  | NOCLK | SPIFLT | SLEEP |  THSD | TMODCHK | OSCCHK |
+
+## RDRAXA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  RAXAR0  |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |
+|  RAXAR1  |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |  RG1V |
+|  RAXAR2  |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |
+|  RAXAR3  |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |  RG2V |
+|  RAXAR4  |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |
+|  RAXAR5  |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |  RG3V |
+
+## RDRAXB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  RAXBR0  |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |
+|  RAXBR1  |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |  RG4V |
+|  RAXBR2  |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |
+|  RAXBR3  |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |  RG5V |
+|  RAXBR4  |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |
+|  RAXBR5  |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |  RG6V |
+
+## RDRAXC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  RAXCR0  |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |
+|  RAXCR1  |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |  RG7V |
+|  RAXCR2  |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |
+|  RAXCR3  |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |  RG8V |
+|  RAXCR4  |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |
+|  RAXCR5  |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |  RG9V |
+
+## RDRAXD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  RAXDR0  | RG10V | RG10V | RG10V | RG10V | RG10V | RG10V | RG10V | RG10V |
+|  RAXDR1  | RG10V | RG10V | RG10V | RG10V | RG10V | RG10V | RG10V | RG10V |
+|  RAXDR2  | RG11V | RG11V | RG11V | RG11V | RG11V | RG11V | RG11V | RG11V |
+|  RAXDR3  | RG11V | RG11V | RG11V | RG11V | RG11V | RG11V | RG11V | RG11V |
+|  RAXDR4  | RG12V | RG12V | RG12V | RG12V | RG12V | RG12V | RG12V | RG12V |
+|  RAXDR5  | RG12V | RG12V | RG12V | RG12V | RG12V | RG12V | RG12V | RG12V |
+
+## RDRAXE
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  RAXER0  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  |
+|  RAXER1  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  | RG13V  |
+|  RAXER2  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  |
+|  RAXER3  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  | RG14V  |
+|  RAXER4  | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V |
+|  RAXER5  | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V | RGA15V |
+
+## RDRAXF
+
+| Register |   Bit 7    |   Bit 6    |   Bit 5    |   Bit 4    |   Bit 3    |   Bit 2    |   Bit 1    |   Bit 0    |
+|:--------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+|  RAXFR0  |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |
+|  RAXFR1  |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |   RGA16V   |
+|  RAXFR2  | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 |
+|  RAXFR3  | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 | VREF2_AUX2 |
+|  RAXFR4  |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |
+|  RAXFR5  |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |  VM_AUX2   |
+
+## RDRAXG
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDRAXH
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDSTATA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| STATAR0  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+| STATAR1  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+| STATAR2  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+| STATAR3  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+| STATAR4  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+| STATAR5  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |  SID  |
+
+## RDSTATB
+
+| Register |     Bit 7     |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0   |
+|:--------:|:-------------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:--------:|
+| STATBR0  |       CT      |    CT   |    CT   |    CT   |    CT   |    CT   |   CTS   |   CTS    |
+| STATBR1  |     RSVD0     |  RSVD0  |  RSVD0  |    CT   |    CT   |    CT   |    CT   |    CT    |
+| STATBR2  |    OC_CNTR    | OC_CNTR | OC_CNTR | OC_CNTR | OC_CNTR | OC_CNTR | OC_CNTR | OC_CNTR  |
+| STATBR3  | PREVENT_BREAK |  MODE_R |  MODE_R |  MODE_V |  CMC_EN | MUTE_ST | SNAP_ST |  RSVD0   |
+| STATBR4  |     RSVD0     |  RSVD0  |  RSVD0  |  RSVD0  |  RSVD0  |  RSVD0  |  RSVD0  | EIS_BUSY |
+| STATBR5  |      REV      |   REV   |   REV   |   REV   |   VER   |   VER   |   VER   |   VER    |
+
+## RDSTATC
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5   |  Bit 4   |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+| STATCR0  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  |  RSVD0   |  RSVD0   | CAL_BUSY |
+| STATCR1  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  |
+| STATCR2  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  | CAL_CNT  |
+| STATCR3  | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT |
+| STATCR4  | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT |
+| STATCR5  | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT | SYNC_CNT |
+
+## RDSTATD
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDSVA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVAR0   |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |
+|  SVAR1   |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |  S1V  |
+|  SVAR2   |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |
+|  SVAR3   |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |  S2V  |
+|  SVAR4   |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |
+|  SVAR5   |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |  S3V  |
+
+## RDSVB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVBR0   |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |
+|  SVBR1   |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |  S4V  |
+|  SVBR2   |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |
+|  SVBR3   |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |  S5V  |
+|  SVBR4   |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |
+|  SVBR5   |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |  S6V  |
+
+## RDSVC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVCR0   |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |
+|  SVCR1   |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |  S7V  |
+|  SVCR2   |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |
+|  SVCR3   |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |  S8V  |
+|  SVCR4   |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |
+|  SVCR5   |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |  S9V  |
+
+## RDSVD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVDR0   |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |
+|  SVDR1   |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |  S10V |
+|  SVDR2   |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |
+|  SVDR3   |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |  S11V |
+|  SVDR4   |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |
+|  SVDR5   |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |  S12V |
+
+## RDSVE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVER0   |  S13V |  S13V |  S13V |  S13V |  S13V |  S13V |  S13V |  S13V |
+|  SVER1   |  S13V |  S13V |  S13V |  S13V |  S13V |  S13V |  S13V |  S13V |
+|  SVER2   |  S14V |  S14V |  S14V |  S14V |  S14V |  S14V |  S14V |  S14V |
+|  SVER3   |  S14V |  S14V |  S14V |  S14V |  S14V |  S14V |  S14V |  S14V |
+|  SVER4   |  S15V |  S15V |  S15V |  S15V |  S15V |  S15V |  S15V |  S15V |
+|  SVER5   |  S15V |  S15V |  S15V |  S15V |  S15V |  S15V |  S15V |  S15V |
+
+## RDSVF
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SVFR0   |  S16V |  S16V |  S16V |  S16V |  S16V |  S16V |  S16V |  S16V |
+|  SVFR1   |  S16V |  S16V |  S16V |  S16V |  S16V |  S16V |  S16V |  S16V |
+|  SVFR2   |  S17V |  S17V |  S17V |  S17V |  S17V |  S17V |  S17V |  S17V |
+|  SVFR3   |  S17V |  S17V |  S17V |  S17V |  S17V |  S17V |  S17V |  S17V |
+|  SVFR4   |  S18V |  S18V |  S18V |  S18V |  S18V |  S18V |  S18V |  S18V |
+|  SVFR5   |  S18V |  S18V |  S18V |  S18V |  S18V |  S18V |  S18V |  S18V |
+
+## RDSVG
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDSVH
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## RDSVSC
+
+| Register |  Bit 7  |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  SVSCR0  |  CS8FLT |  CS7FLT |  CS6FLT |  CS5FLT |  CS4FLT |  CS3FLT |  CS2FLT |  CS1FLT |
+|  SVSCR1  | CS16FLT | CS15FLT | CS14FLT | CS13FLT | CS12FLT | CS11FLT | CS10FLT |  CS9FLT |
+|  SVSCR2  |   RSVD  |   RSVD  |   RSVD  |   RSVD  |   RSVD  |   RSVD  | CS18FLT | CS17FLT |
+|  SVSCR3  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+|  SVSCR4  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+|  SVSCR5  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+
+## WRCFGA
+
+| Register | Bit 7  |  Bit 6  | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 |  Bit 0   |
+|:--------:|:------:|:-------:|:-----:|:-----:|:-----:|:-----:|:-----:|:--------:|
+|  CFGAR0  | REFON  | COMM_BK |   FC  |   FC  |   FC  |  CTH  |  CTH  |   CTH    |
+|  CFGAR1  | RSVD0  |  RSVD0  | RSVD0 | RSVD0 | RSVD0 | RSVD0 | RSVD0 | IIR_MODE |
+|  CFGAR2  | SOAKON |  OWRNG  |  OWA  |  OWA  |  OWA  | RSVD0 | RSVD0 |  RSVD0   |
+|  CFGAR3  | RSVD1  |  RSVD1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  RSVD1   |
+|  CFGAR4  | RSVD1  |  RSVD1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  RSVD1   |
+|  CFGAR5  | RSVD1  |  RSVD1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  RSVD1   |
+
+## WRCFGB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 |   Bit 1    |   Bit 0   |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:----------:|:---------:|
+|  CFGBR0  | RSVD0 | RSVD0 | RSVD0 | RSVD0 | ISHSP | ISHSP | ALTGNDAUX2 | ALTGNDAUX |
+|  CFGBR1  | RSVD0 | RSVD0 | RSVD0 | RSVD0 | RSVD0 | RSVD0 |   RSVD0    |   RSVD0   |
+|  CFGBR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+|  CFGBR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+|  CFGBR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+|  CFGBR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |   RSVD1    |   RSVD1   |
+
+## WRCFGC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGCR0  |  GPI8 |  GPI7 |  GPI6 |  GPI5 |  GPI4 |  GPI3 |  GPI2 |  GPI1 |
+|  CFGCR1  | RSVD1 | RSVD1 | GPI14 | GPI13 | GPI12 | GPI11 | GPI10 |  GPI9 |
+|  CFGCR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGCR3  |  GPO8 |  GPO7 |  GPO6 |  GPO5 |  GPO4 |  GPO3 |  GPO2 |  GPO1 |
+|  CFGCR4  | RSVD1 | RSVD1 | GPO14 | GPO13 | GPO12 | GPO11 | GPO10 |  GPO9 |
+|  CFGCR5  | PPDRV | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WRCFGD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGDR0  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGDR1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGDR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGDR3  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |  VUV  |
+|  CFGDR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  VUV  |  VUV  |  VUV  |  VUV  |
+|  CFGDR5  | DTMEN | DTRNG |  DCTO |  DCTO |  DCTO |  DCTO |  DCTO |  DCTO |
+
+## WRCFGE
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGER0  |  PWM2 |  PWM2 |  PWM2 |  PWM2 |  PWM1 |  PWM1 |  PWM1 |  PWM1 |
+|  CFGER1  |  PWM4 |  PWM4 |  PWM4 |  PWM4 |  PWM3 |  PWM3 |  PWM3 |  PWM3 |
+|  CFGER2  |  PWM6 |  PWM6 |  PWM6 |  PWM6 |  PWM5 |  PWM5 |  PWM5 |  PWM5 |
+|  CFGER3  |  PWM8 |  PWM8 |  PWM8 |  PWM8 |  PWM7 |  PWM7 |  PWM7 |  PWM7 |
+|  CFGER4  | PWM10 | PWM10 | PWM10 | PWM10 |  PWM9 |  PWM9 |  PWM9 |  PWM9 |
+|  CFGER5  | PWM12 | PWM12 | PWM12 | PWM12 | PWM11 | PWM11 | PWM11 | PWM11 |
+
+## WRCFGF
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|       CFGFR0      | PWM14 | PWM14 | PWM14 | PWM14 | PWM13 | PWM13 | PWM13 | PWM13 |
+|       CFGFR1      | PWM16 | PWM16 | PWM16 | PWM16 | PWM15 | PWM15 | PWM15 | PWM15 |
+|       CFGFR2      | PWM18 | PWM18 | PWM18 | PWM18 | PWM17 | PWM17 | PWM17 | PWM17 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WRCFGG
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGGR0  | ICOM0 | ICOM0 | ICOM0 | ICOM0 | FCOM0 | FCOM0 | FCOM0 | FCOM0 |
+|  CFGGR1  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |   D0  |
+|  CFGGR2  | ICOM1 | ICOM1 | ICOM1 | ICOM1 | FCOM1 | FCOM1 | FCOM1 | FCOM1 |
+|  CFGGR3  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |   D1  |
+|  CFGGR4  | ICOM2 | ICOM2 | ICOM2 | ICOM2 | FCOM2 | FCOM2 | FCOM2 | FCOM2 |
+|  CFGGR5  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |   D2  |
+
+## WRCFGH
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5   |  Bit 4   |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+|  CFGHR0  | CMC_MAN  | CMC_MPER | CMC_MPER | CMC_MPER | CMC_BTM  | CMC_TPER | CMC_TPER | CMC_TPER |
+|  CFGHR1  | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV | CMC_NDEV |
+|  CFGHR2  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   | CMC_DIR  | CMC_GOE  | CMC_GOE  | CMC_GOE  |
+|  CFGHR3  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |
+|  CFGHR4  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |
+|  CFGHR5  |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |  RSVD1   |
+
+## WRCFGI
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGIR0  | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C |
+|  CFGIR1  | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C |
+|  CFGIR2  | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C | CMM_C |
+|  CFGIR3  | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G |
+|  CFGIR4  | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G | CMM_G |
+|  CFGIR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WRCFGJ
+
+| Register |  Bit 7  |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  CFGJR0  | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV |
+|  CFGJR1  | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_CUV | CMT_CUV | CMT_CUV | CMT_CUV |
+|  CFGJR2  | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV | CMT_COV |
+|  CFGJR3  | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV |
+|  CFGJR4  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  | CMT_CDV | CMT_CDV | CMT_CDV | CMT_CDV |
+|  CFGJR5  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+
+## WRCFGK
+
+| Register |  Bit 7  |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  CFGKR0  | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV |
+|  CFGKR1  | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GUV | CMT_GUV | CMT_GUV | CMT_GUV |
+|  CFGKR2  | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV | CMT_GOV |
+|  CFGKR3  | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV |
+|  CFGKR4  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  | CMT_GDV | CMT_GDV | CMT_GDV | CMT_GDV |
+|  CFGKR5  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+
+## WRCFGL
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGLR0  | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 | DATA0 |
+|  CFGLR1  | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 | DATA1 |
+|  CFGLR2  | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 | DATA2 |
+|  CFGLR3  | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 | DATA3 |
+|  CFGLR4  | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 | DATA4 |
+|  CFGLR5  | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 | DATA5 |
+
+## WRCFGM
+
+| Register |  Bit 7  |  Bit 6  |     Bit 5     |     Bit 4     |  Bit 3   |  Bit 2   |  Bit 1   |  Bit 0   |
+|:--------:|:-------:|:-------:|:-------------:|:-------------:|:--------:|:--------:|:--------:|:--------:|
+|  CFGMR0  |  EIS_N  |  EIS_N  |     EIS_N     |     EIS_N     |  EIS_N   |  EIS_N   |  EIS_N   |  EIS_N   |
+|  CFGMR1  |  RSVD0  |  RSVD0  |     RSVD0     |     EIS_N     |  EIS_N   |  EIS_N   |  EIS_N   |  EIS_N   |
+|  CFGMR2  |  EIS_ST | EIS_DRV | EIS_CURR_MEAS | EIS_CURR_MEAS | EIS_SOAK | EIS_SOAK | EIS_SOAK | EIS_SOAK |
+|  CFGMR3  | EIS_OSR | EIS_OSR |    EIS_OSR    |    EIS_OSR    | EIS_OSR  | EIS_OSR  | EIS_OSR  | EIS_OSR  |
+|  CFGMR4  | EIS_OSR | EIS_OSR |    EIS_OSR    |    EIS_OSR    | EIS_OSR  | EIS_OSR  | EIS_OSR  | EIS_OSR  |
+|  CFGMR5  |  RSVD0  |  RSVD0  |     RSVD0     |     RSVD0     |  RSVD0   |  RSVD0   | EIS_OSR  | EIS_OSR  |
+
+## WRCFGN
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGNR0  |  DCC8 |  DCC7 |  DCC6 |  DCC5 |  DCC4 |  DCC3 |  DCC2 |  DCC1 |
+|  CFGNR1  | DCC16 | DCC15 | DCC14 | DCC13 | DCC12 | DCC11 | DCC10 |  DCC9 |
+|  CFGNR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | DCC18 | DCC17 |
+|  CFGNR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGNR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGNR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WRCFGO
+
+| Register | Bit 7  | Bit 6  | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  CFGOR0  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR1  | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D | FLAG_D |
+|  CFGOR2  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR3  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR4  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+|  CFGOR5  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  | RSVD1  |
+
+## WRCFGP
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  CFGPR0  |  SEED |  SEED |  SEED |  SEED |  SEED |  SEED |  SEED |  SEED |
+|  CFGPR1  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |  SEED |  SEED |
+|  CFGPR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGPR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGPR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+|  CFGPR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WRFLAGA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4  | Bit 3 | Bit 2 |  Bit 1  | Bit 0  |
+|:--------:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|:-------:|:------:|
+| FLAGAR0  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  RSVD1  | RSVD1  |
+| FLAGAR1  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  RSVD1  | RSVD1  |
+| FLAGAR2  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  RSVD1  | RSVD1  |
+| FLAGAR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1  | RSVD1 | RSVD1 |  VA_UV2 | REF_UV |
+| FLAGAR4  | VA_OV | VA_UV | VD_OV | VD_UV  |  CED  |  CMED |   SED   |  SMED  |
+| FLAGAR5  |  VDEL |  VDE  | NOCLK | SPIFLT | SLEEP |  THSD | TMODCHK | OSCCHK |
+
+## WRFLAGB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| FLAGBR0  |  C8UV |  C7UV |  C6UV |  C5UV |  C4UV |  C3UV |  C2UV |  C1UV |
+| FLAGBR1  | C16UV | C15UV | C14UV | C13UV | C12UV | C11UV | C10UV |  C9UV |
+| FLAGBR2  |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD |  RSVD | C18UV | C17UV |
+| FLAGBR3  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| FLAGBR4  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| FLAGBR5  | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WRFLAGC
+
+| Register |  Bit 7   |  Bit 6   |  Bit 5  |  Bit 4  |  Bit 3   |  Bit 2   |   Bit 1   |   Bit 0    |
+|:--------:|:--------:|:--------:|:-------:|:-------:|:--------:|:--------:|:---------:|:----------:|
+| FLAGCR0  | CMF_GDVP | CMF_GDVN | CMF_GOV | CMF_GUV | CMF_CDVP | CMF_CDVN |  CMF_COV  |  CMF_CUV   |
+| FLAGCR1  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   | CMF_BTMTO | CMF_BTMCMP |
+| FLAGCR2  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+| FLAGCR3  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+| FLAGCR4  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+| FLAGCR5  |  RSVD0   |  RSVD0   |  RSVD0  |  RSVD0  |  RSVD0   |  RSVD0   |   RSVD0   |   RSVD0    |
+
+## WRFLAGD
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4  | Bit 3 | Bit 2 |  Bit 1  | Bit 0  |
+|:--------:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|:-------:|:------:|
+| FLAGDR0  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  RSVD0  | RSVD0  |
+| FLAGDR1  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  RSVD0  | RSVD0  |
+| FLAGDR2  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  RSVD0  | RSVD0  |
+| FLAGDR3  | RSVD0 | RSVD0 | RSVD0 | RSVD0  | RSVD0 | RSVD0 |  VA_UV2 | REF_UV |
+| FLAGDR4  | VA_OV | VA_UV | VD_OV | VD_UV  |  CED  |  CMED |   SED   |  SMED  |
+| FLAGDR5  |  VDEL |  VDE  | NOCLK | SPIFLT | SLEEP |  THSD | TMODCHK | OSCCHK |
+
+## WRSGCA
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SGCAR0  |  RSVD |  RSVD |  SGC1 |  SGC1 |  SGC1 |  SGC1 |  SGC1 |  SGC1 |
+|  SGCAR1  |  RSVD |  RSVD |  SGC2 |  SGC2 |  SGC2 |  SGC2 |  SGC2 |  SGC2 |
+|  SGCAR2  |  RSVD |  RSVD |  SGC3 |  SGC3 |  SGC3 |  SGC3 |  SGC3 |  SGC3 |
+|  SGCAR3  |  RSVD |  RSVD |  SGC4 |  SGC4 |  SGC4 |  SGC4 |  SGC4 |  SGC4 |
+|  SGCAR4  |  RSVD |  RSVD |  SGC5 |  SGC5 |  SGC5 |  SGC5 |  SGC5 |  SGC5 |
+|  SGCAR5  |  RSVD |  RSVD |  SGC6 |  SGC6 |  SGC6 |  SGC6 |  SGC6 |  SGC6 |
+
+## WRSGCB
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SGCBR0  |  RSVD |  RSVD |  SGC7 |  SGC7 |  SGC7 |  SGC7 |  SGC7 |  SGC7 |
+|  SGCBR1  |  RSVD |  RSVD |  SGC8 |  SGC8 |  SGC8 |  SGC8 |  SGC8 |  SGC8 |
+|  SGCBR2  |  RSVD |  RSVD |  SGC9 |  SGC9 |  SGC9 |  SGC9 |  SGC9 |  SGC9 |
+|  SGCBR3  |  RSVD |  RSVD | SGC10 | SGC10 | SGC10 | SGC10 | SGC10 | SGC10 |
+|  SGCBR4  |  RSVD |  RSVD | SGC11 | SGC11 | SGC11 | SGC11 | SGC11 | SGC11 |
+|  SGCBR5  |  RSVD |  RSVD | SGC12 | SGC12 | SGC12 | SGC12 | SGC12 | SGC12 |
+
+## WRSGCC
+
+| Register | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:--------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|  SGCCR0  |  RSVD |  RSVD | SGC13 | SGC13 | SGC13 | SGC13 | SGC13 | SGC13 |
+|  SGCCR1  |  RSVD |  RSVD | SGC14 | SGC14 | SGC14 | SGC14 | SGC14 | SGC14 |
+|  SGCCR2  |  RSVD |  RSVD | SGC15 | SGC15 | SGC15 | SGC15 | SGC15 | SGC15 |
+|  SGCCR3  |  RSVD |  RSVD | SGC16 | SGC16 | SGC16 | SGC16 | SGC16 | SGC16 |
+|  SGCCR4  |  RSVD |  RSVD | SGC17 | SGC17 | SGC17 | SGC17 | SGC17 | SGC17 |
+|  SGCCR5  |  RSVD |  RSVD | SGC18 | SGC18 | SGC18 | SGC18 | SGC18 | SGC18 |
+
+## WRSGCD
+
+|      Register     | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
+|:-----------------:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+| Reserved Register | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 | RSVD1 |
+
+## WREISGC
+
+| Register | Bit 7 | Bit 6 | Bit 5  | Bit 4  | Bit 3  | Bit 2  | Bit 1  | Bit 0  |
+|:--------:|:-----:|:-----:|:------:|:------:|:------:|:------:|:------:|:------:|
+| EISGCR0  |  RSVD |  RSVD | EIS1GC | EIS1GC | EIS1GC | EIS1GC | EIS1GC | EIS1GC |
+| EISGCR1  |  RSVD |  RSVD | EIS2GC | EIS2GC | EIS2GC | EIS2GC | EIS2GC | EIS2GC |
+| EISGCR2  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+| EISGCR3  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+| EISGCR4  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+| EISGCR5  |  RSVD |  RSVD |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |  RSVD  |
+
+## WRSVSC
+
+| Register |  Bit 7  |  Bit 6  |  Bit 5  |  Bit 4  |  Bit 3  |  Bit 2  |  Bit 1  |  Bit 0  |
+|:--------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+|  SVSCR0  |  CS8FLT |  CS7FLT |  CS6FLT |  CS5FLT |  CS4FLT |  CS3FLT |  CS2FLT |  CS1FLT |
+|  SVSCR1  | CS16FLT | CS15FLT | CS14FLT | CS13FLT | CS12FLT | CS11FLT | CS10FLT |  CS9FLT |
+|  SVSCR2  |   RSVD  |   RSVD  |   RSVD  |   RSVD  |   RSVD  |   RSVD  | CS18FLT | CS17FLT |
+|  SVSCR3  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+|  SVSCR4  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+|  SVSCR5  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |  RSVD1  |
+

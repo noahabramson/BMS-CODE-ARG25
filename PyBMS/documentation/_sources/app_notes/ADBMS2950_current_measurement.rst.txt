@@ -1,0 +1,36 @@
+ADBMS2950 Current Measurement
+===================================
+
+This application note will briefly describe how you can perform current measurements with ADBMS2950.
+To do this, you need the following:
+
+- ADBMS2950 Basic Eval Board (at least rev C)
+- SDP-K1 with ADBMS6822 eval board
+- Current Source that can deliver at least 1 amp
+- Clamps that can handle the current to connect to the shunt
+- 5 volt supply for the eval board (or Micro USB Cable)
+
+Setup
+----------------
+First, connect the IsoSPI cable from the 6822 eval board main port to the ADBMS2950 eval board port A.
+This makes sure there can be communication. Next, connect the 5 volt supply to the ADBMS2950 eval board.
+This can either be done via the +/- pins or the Micro USB Cable.
+
+Next, connect the clamps to the shunt. After that they can be connected to the current source.
+This can be a regular power supply that has controllable current.
+
+Software
+--------------
+After everything has been connected, you can run on of the scratchpads that measures current. In this case,
+we are going to use ADBMS2950_Ix_Scratchpad. You can find this under scratchpads/ADBMS295X/ADBMS2950_Ix_Scratchpad.py
+
+This scratchpad shows various current measurement. It shows both the individual samples as the accumalated samples.
+
+To run this script, simply set the correct com port in
+
+.. code-block:: python
+   :name: change_com_port
+
+   interface = USB_TO_SPI_BYTE('COM23', 115200, stdout=False)
+
+After this, you can run the script with Ctrl+Shift+F10 or by pressing the play button in the right top corner.

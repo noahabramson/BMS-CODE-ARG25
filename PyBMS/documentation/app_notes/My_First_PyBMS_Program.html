@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My first PyBMS API Program &mdash; ADI_pyBMS 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Commands ADBMS2950" href="ADBMS2950.html" />
+    <link rel="prev" title="ADBMS2950 Current Measurement" href="ADBMS2950_current_measurement.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ADI_pyBMS
+          </a>
+              <div class="version">
+                2.0.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user.html">User documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../application-notes.html">Application Notes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ADBMS2950_current_measurement.html">ADBMS2950 Current Measurement</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">My first PyBMS API Program</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-pybms">Install PyBMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-setup">Hardware Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-structure">Code structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-an-interface">Creating an interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-list">Command list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cell-measuring-scratchpad">Cell measuring scratchpad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Command list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extracting-the-data-to-a-csv">Extracting the data to a CSV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-pitfalls">Common pitfalls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ADBMS2950.html">Commands ADBMS2950</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADBMS6830.html">Commands ADBMS6830</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADBMS6832.html">Commands ADBMS6832</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ADI_pyBMS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../application-notes.html">Application Notes</a> &raquo;</li>
+      <li>My first PyBMS API Program</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/app_notes/My_First_PyBMS_Program.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="my-first-pybms-api-program">
+<h1>My first PyBMS API Program<a class="headerlink" href="#my-first-pybms-api-program" title="Permalink to this heading"></a></h1>
+<p>PyBMS API was created to facilitate BMS IC communication with a higher level interface over traditional interfaces (Python over C/C++).
+This to enable a more user friendly way of interfacing with the BMS IC’s.
+In this simple first PyBMS tutorial a simple program is written which sets the initial reference voltage for the cell readings and then reads out the cell voltages.
+Before you can deepdive into the actual code, a few things need to be setup.</p>
+<section id="install-pybms">
+<h2>Install PyBMS<a class="headerlink" href="#install-pybms" title="Permalink to this heading"></a></h2>
+<p>Please read the guide in user/Installation to install PyBMS API. After the API has
+properly been installed and PyCharm CE has been configured, we can start with the hardware setup.</p>
+</section>
+<section id="hardware-setup">
+<h2>Hardware Setup<a class="headerlink" href="#hardware-setup" title="Permalink to this heading"></a></h2>
+<p>So for the setup, the following things are needed:</p>
+<ul class="simple">
+<li><p>SDP-K1 for interfacing between the test device and the computer/laptop Note that here the SPI cable is not plugged in correctly!</p></li>
+<li><p>A test device (This example uses the Lynx 18 Eval board +resistor string)</p></li>
+<li><p>25V/0.5A power supply (depending on the device you are using. ADBMS2950 can be powered via USB)</p></li>
+<li><p>An IsoSPI cable, shielded twisted pairs</p></li>
+<li><p>Some test hooks to power the IC</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/lynx_connected_to_sdpk1.png"><img alt="SDP_K1 drive on computer" src="../_images/lynx_connected_to_sdpk1.png" style="width: 600px;" /></a>
+</section>
+<section id="code-structure">
+<h2>Code structure<a class="headerlink" href="#code-structure" title="Permalink to this heading"></a></h2>
+<p>You can find the code examples in the scratchpads folder. For convenience it is recommened to keep
+the same structure. For example, an example on Lynx18 should be in scratchpads/ADBMS6842. However, for
+the functionality, this is not required.</p>
+<p>The concept of the scripts in PyBMS all are based on the following components:</p>
+<ol class="arabic simple">
+<li><p>creating an interface,</p></li>
+<li><p>creating a command list</p></li>
+<li><p>sending the command list to the device</p></li>
+<li><p>Process the data (optional)</p></li>
+</ol>
+</section>
+<section id="creating-an-interface">
+<h2>Creating an interface<a class="headerlink" href="#creating-an-interface" title="Permalink to this heading"></a></h2>
+<p>The interface part is easy, you select the interface you want to use, define which device you are using and which comport your SDPK1 is connected to.
+There are a variety of interfaces available, to see them all, go to dev/Engine/Interfaces this will give you a list.
+Most of the time, USB TO SPI BYTE is used or Virtual SPI.
+For USB TO SPI BYTE, you need to select which comport is connected to the SDP-K1.
+You can do this by running the dev/util/show_comports.py script or by opening device manager and looking at the serial busses.
+Fill the comport in as the first parameter of the interface.</p>
+<div class="highlight-python notranslate" id="interface-0"><div class="highlight"><pre><span></span> <span class="n">interface</span> <span class="o">=</span> <span class="n">USB_TO_SPI_BYTE</span><span class="p">(</span><span class="s1">&#39;COM5&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+ <span class="n">bms</span> <span class="o">=</span> <span class="n">BMS</span><span class="p">(</span><span class="n">interface</span><span class="p">)</span>
+ <span class="n">board_list</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Device&#39;</span><span class="p">:</span> <span class="n">ADBMS6837_REVA</span><span class="p">}]</span>
+</pre></div>
+</div>
+</section>
+<section id="command-list">
+<h2>Command list<a class="headerlink" href="#command-list" title="Permalink to this heading"></a></h2>
+<p>The command list is the hard of PyBMS. Here we define which commands we are going to send to the device. These commands are send to all devices in the chain. These commands can be find in the datasheet of the selected device. In the case of Lion (6830), there is even a whole list of all the commands that can be used! That can be found on Table 51. Command Codes. The syntax of the commands in the command list is as follows:</p>
+<div class="highlight-python notranslate" id="command-0"><div class="highlight"><pre><span></span> <span class="p">{</span><span class="s1">&#39;command&#39;</span><span class="p">:</span> <span class="s1">&#39;The name of the command&#39;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">the</span> <span class="n">bitfields</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">selected</span><span class="p">,</span> <span class="k">for</span> <span class="n">example</span> <span class="s1">&#39;CONT&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;the key where the results are written to&quot;</span><span class="p">}},</span>
+</pre></div>
+</div>
+<p>For example, in the case of:</p>
+<div class="highlight-python notranslate" id="command-1"><div class="highlight"><pre><span></span> <span class="p">{</span><span class="s1">&#39;command&#39;</span><span class="p">:</span> <span class="s1">&#39;ADCV&#39;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;CONT&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;RD&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}},</span>
+</pre></div>
+</div>
+<p>The command name is ADCV and the bitfields CONT (for continuous measurement) and RD (for redundant) measurement are both False.</p>
+</section>
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this heading"></a></h2>
+<p>The results are returned in a dict. The format of this is as follows:</p>
+<div class="highlight-python notranslate" id="command-2"><div class="highlight"><pre><span></span> <span class="n">results</span><span class="p">[</span><span class="n">loop</span> <span class="n">number</span><span class="p">][</span><span class="nb">map</span> <span class="n">key</span><span class="p">][</span><span class="n">device</span> <span class="n">number</span><span class="p">][</span><span class="n">key</span> <span class="n">of</span> <span class="n">value</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Loop number</strong>: int, in case you are using the loop functionality, this will be the measurement number you did. In case you don’t run a loop, this value doesn’t exist and you can remove loop number all together</p></li>
+<li><p><strong>Map key</strong>: str, this is the key where you mapped your value to. For example ‘Current’. This is the value you can choose yourself. It is possible to write multiple value to the same map_key, but if they overwrite only the latest will remain</p></li>
+<li><p><strong>Device_number</strong>: int, in case you only using one device, this value will be zero. The next device will have a one etc</p></li>
+<li><p><strong>Key of value</strong>: str, this is the most complicated value. This is the name of the value on how it is written. For example, pec_match, I1, I2, OC1TH. These names should be the same as in the datasheet, but sometimes or not exactly up to date.</p></li>
+</ul>
+<p>This will for example be the value of I1 of the first device in the chain.</p>
+</section>
+<section id="cell-measuring-scratchpad">
+<h2>Cell measuring scratchpad<a class="headerlink" href="#cell-measuring-scratchpad" title="Permalink to this heading"></a></h2>
+<p>Now lets go to an example. For every eval board or test device, scratchpads are made. These scratchpads are example code scripts of all the different functions of an IC. All scratchpads are located in scratchpad directory.  As here we are using the Lynx as our Device under Test (DUT), head on over to the ADBMS6837 directory inside the scratchpad directory. Go to ADBMS6837_Cell_data.py, <em>if it does not exist, go ahead and copy the code below and store it in a new scratchpad.</em></p>
+<div class="highlight-python notranslate" id="command-3"><div class="highlight"><pre><span></span> <span class="kn">from</span> <span class="nn">Engine.BMS</span> <span class="kn">import</span> <span class="n">BMS</span>
+ <span class="kn">from</span> <span class="nn">Engine.Devices.ADBMS6837_REVA</span> <span class="kn">import</span> <span class="n">ADBMS6837_REVA</span>
+ <span class="kn">from</span> <span class="nn">Engine.Interfaces.USB_TO_SPI_BYTE</span> <span class="kn">import</span> <span class="n">USB_TO_SPI_BYTE</span>
+ <span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+
+ <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+     <span class="c1"># Start interface that connects to SDP-K1</span>
+     <span class="n">interface</span> <span class="o">=</span> <span class="n">USB_TO_SPI_BYTE</span><span class="p">(</span><span class="s1">&#39;COM5&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+     <span class="c1"># Create bms object</span>
+     <span class="n">bms</span> <span class="o">=</span> <span class="n">BMS</span><span class="p">(</span><span class="n">interface</span><span class="p">)</span>
+     <span class="c1"># Set device 0 = ADBMS6837_REVA (LYNX18)</span>
+     <span class="n">board_list</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Device&#39;</span><span class="p">:</span> <span class="n">ADBMS6837_REVA</span><span class="p">}]</span>
+
+
+     <span class="n">command_list</span> <span class="o">=</span> <span class="p">[</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$SPI_WAKEUP$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Wakeup Time&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">}},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$DELAY_MS$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Delay&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$SPI_WAKEUP$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Wakeup Time&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;WRCFGA&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;REFON&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}},</span> <span class="c1">#reference bit set to 1, IC pauses for T{refup} (4ms) to allow reference to power up.</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;ADCV&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;CONT&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}},</span> <span class="c1">#contininously execute conversion cycles according to the ADC command.</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$DELAY_MS$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Delay&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">}},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$SPI_WAKEUP$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Wakeup Time&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;$DELAY_MS$&quot;</span><span class="p">,</span> <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Delay&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}},</span>
+
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;SNAP&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;RDCVA&quot;</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;Cells&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;RDCVB&quot;</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;Cells&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;RDCVC&quot;</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;Cells&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;RDCVD&quot;</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;Cells&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;RDCVE&quot;</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;Cells&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;RDCVF&quot;</span><span class="p">,</span> <span class="s2">&quot;map_key&quot;</span><span class="p">:</span> <span class="s2">&quot;Cells&quot;</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSNAP&quot;</span><span class="p">},</span>
+     <span class="p">]</span>
+
+     <span class="c1"># Run results and close interview afterwards</span>
+     <span class="n">results</span> <span class="o">=</span> <span class="n">bms</span><span class="o">.</span><span class="n">run_generic_command_list</span><span class="p">(</span><span class="n">command_list</span><span class="p">,</span> <span class="n">board_list</span><span class="p">)</span>
+
+     <span class="n">interface</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+     <span class="c1"># Print results with pretty print</span>
+     <span class="n">pprint</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+
+
+ <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+     <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h2>Command list<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>Looking at the command list, before the cells can be read a few things need to happen.
+First the IC needs to wake up, this always needs to happen and is done with an SPI wake up and an added delay to wait for the device to wake up.
+Then to be able to accurately measure the cell voltage, the reference voltage must be on.
+This is done with the REFON argument of Config A.
+This can all be found in the preliminary datasheet of Lynx page 44-70.
+Then the Cell ADC is activated using the ADCV command with the continuous argument to enable continuous measurements.
+Lastly the Cell voltages are read out using the RDCV* command in which the * indicates the cell group.
+A indicates cell 1-3, B indicates 4-6 etc.
+The cell value is then stored under the Key name <em>“Cells”</em>.</p>
+</section>
+<section id="id2">
+<h2>Results<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>Running the script above will give you the following results:</p>
+<ul class="simple">
+<li><p>In key space “Cells”, each cell value is displayed. As well as the cmd PEC and PEC status, indicating if the all packages were send and received correctly.</p></li>
+<li><p>In key space “Cells” also the Raw values are displayed.</p></li>
+</ul>
+<div class="highlight-python notranslate" id="result-0"><div class="highlight"><pre><span></span> <span class="n">C</span><span class="p">:</span>\<span class="n">devme</span>\<span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">devme</span><span class="o">/</span><span class="n">scratchpads</span><span class="o">/</span><span class="n">ADBMS6837</span><span class="o">/</span><span class="n">SimpleScratchpads</span><span class="o">/</span><span class="n">ADBMS6837_Cell_Data</span><span class="o">.</span><span class="n">py</span>
+ <span class="p">{</span><span class="s1">&#39;All&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">BMS_Config</span><span class="o">.</span><span class="n">SPIWakeup</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB4CA0</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">BMS_Config</span><span class="o">.</span><span class="n">DELAY_MS</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB4EE0</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">WRCFGA</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB4F10</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">ADCV</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5000</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">BMS_Config</span><span class="o">.</span><span class="n">DELAY_MS</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5210</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">BMS_Config</span><span class="o">.</span><span class="n">SPIWakeup</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5B10</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">BMS_Config</span><span class="o">.</span><span class="n">DELAY_MS</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5D80</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">SNAP</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5DE0</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">RDCVA</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5E70</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">RDCVB</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB5F30</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">RDCVC</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB60B0</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">RDCVD</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB6380</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">RDCVE</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB6650</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">RDCVF</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB6920</span><span class="o">&gt;</span><span class="p">,</span>
+          <span class="o">&lt;</span><span class="n">Engine</span><span class="o">.</span><span class="n">Devices</span><span class="o">.</span><span class="n">ADBMS_GEN7</span><span class="o">.</span><span class="n">UNSNAP</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x000001A6CAEB6BF0</span><span class="o">&gt;</span><span class="p">],</span>
+  <span class="s1">&#39;Cells&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+             <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+             <span class="s1">&#39;ADDR&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+             <span class="s1">&#39;C10V&#39;</span><span class="p">:</span> <span class="mf">1.3914</span><span class="p">,</span>
+             <span class="s1">&#39;C11V&#39;</span><span class="p">:</span> <span class="mf">1.39125</span><span class="p">,</span>
+             <span class="s1">&#39;C12V&#39;</span><span class="p">:</span> <span class="mf">1.39065</span><span class="p">,</span>
+             <span class="s1">&#39;C13V&#39;</span><span class="p">:</span> <span class="mf">1.39035</span><span class="p">,</span>
+             <span class="s1">&#39;C14V&#39;</span><span class="p">:</span> <span class="mf">1.38975</span><span class="p">,</span>
+             <span class="s1">&#39;C15V&#39;</span><span class="p">:</span> <span class="mf">1.3908</span><span class="p">,</span>
+             <span class="s1">&#39;C16V&#39;</span><span class="p">:</span> <span class="mf">1.39005</span><span class="p">,</span>
+             <span class="s1">&#39;C17V&#39;</span><span class="p">:</span> <span class="mf">1.3902</span><span class="p">,</span>
+             <span class="s1">&#39;C18V&#39;</span><span class="p">:</span> <span class="mf">1.39155</span><span class="p">,</span>
+             <span class="s1">&#39;C1V&#39;</span><span class="p">:</span> <span class="mf">1.3911</span><span class="p">,</span>
+             <span class="s1">&#39;C2V&#39;</span><span class="p">:</span> <span class="mf">1.39095</span><span class="p">,</span>
+             <span class="s1">&#39;C3V&#39;</span><span class="p">:</span> <span class="mf">1.3899</span><span class="p">,</span>
+             <span class="s1">&#39;C4V&#39;</span><span class="p">:</span> <span class="mf">1.3908</span><span class="p">,</span>
+             <span class="s1">&#39;C5V&#39;</span><span class="p">:</span> <span class="mf">1.3905</span><span class="p">,</span>
+             <span class="s1">&#39;C6V&#39;</span><span class="p">:</span> <span class="mf">1.3899</span><span class="p">,</span>
+             <span class="s1">&#39;C7V&#39;</span><span class="p">:</span> <span class="mf">1.39035</span><span class="p">,</span>
+             <span class="s1">&#39;C8V&#39;</span><span class="p">:</span> <span class="mf">1.39035</span><span class="p">,</span>
+             <span class="s1">&#39;C9V&#39;</span><span class="p">:</span> <span class="mf">1.3908</span><span class="p">,</span>
+             <span class="s1">&#39;CCNT&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+             <span class="s1">&#39;CMD PEC&#39;</span><span class="p">:</span> <span class="mi">44656</span><span class="p">,</span>
+             <span class="s1">&#39;DATA PEC&#39;</span><span class="p">:</span> <span class="mi">907</span><span class="p">,</span>
+             <span class="s1">&#39;Total_PEC_Status&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}],</span>
+  <span class="s1">&#39;Cells_RAW&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="s1">&#39;ADDR&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+                 <span class="s1">&#39;C10V&#39;</span><span class="p">:</span> <span class="mi">64812</span><span class="p">,</span>
+                 <span class="s1">&#39;C11V&#39;</span><span class="p">:</span> <span class="mi">64811</span><span class="p">,</span>
+                 <span class="s1">&#39;C12V&#39;</span><span class="p">:</span> <span class="mi">64807</span><span class="p">,</span>
+                 <span class="s1">&#39;C13V&#39;</span><span class="p">:</span> <span class="mi">64805</span><span class="p">,</span>
+                 <span class="s1">&#39;C14V&#39;</span><span class="p">:</span> <span class="mi">64801</span><span class="p">,</span>
+                 <span class="s1">&#39;C15V&#39;</span><span class="p">:</span> <span class="mi">64808</span><span class="p">,</span>
+                 <span class="s1">&#39;C16V&#39;</span><span class="p">:</span> <span class="mi">64803</span><span class="p">,</span>
+                 <span class="s1">&#39;C17V&#39;</span><span class="p">:</span> <span class="mi">64804</span><span class="p">,</span>
+                 <span class="s1">&#39;C18V&#39;</span><span class="p">:</span> <span class="mi">64813</span><span class="p">,</span>
+                 <span class="s1">&#39;C1V&#39;</span><span class="p">:</span> <span class="mi">64810</span><span class="p">,</span>
+                 <span class="s1">&#39;C2V&#39;</span><span class="p">:</span> <span class="mi">64809</span><span class="p">,</span>
+                 <span class="s1">&#39;C3V&#39;</span><span class="p">:</span> <span class="mi">64802</span><span class="p">,</span>
+                 <span class="s1">&#39;C4V&#39;</span><span class="p">:</span> <span class="mi">64808</span><span class="p">,</span>
+                 <span class="s1">&#39;C5V&#39;</span><span class="p">:</span> <span class="mi">64806</span><span class="p">,</span>
+                 <span class="s1">&#39;C6V&#39;</span><span class="p">:</span> <span class="mi">64802</span><span class="p">,</span>
+                 <span class="s1">&#39;C7V&#39;</span><span class="p">:</span> <span class="mi">64805</span><span class="p">,</span>
+                 <span class="s1">&#39;C8V&#39;</span><span class="p">:</span> <span class="mi">64805</span><span class="p">,</span>
+                 <span class="s1">&#39;C9V&#39;</span><span class="p">:</span> <span class="mi">64808</span><span class="p">,</span>
+                 <span class="s1">&#39;CCNT&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="s1">&#39;CMD PEC&#39;</span><span class="p">:</span> <span class="mi">44656</span><span class="p">,</span>
+                 <span class="s1">&#39;DATA PEC&#39;</span><span class="p">:</span> <span class="mi">907</span><span class="p">,</span>
+                 <span class="s1">&#39;Total_PEC_Status&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}],</span>
+  <span class="s1">&#39;Total_PEC_Status&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+
+ <span class="n">Process</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">code</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</section>
+<section id="extracting-the-data-to-a-csv">
+<h2>Extracting the data to a CSV<a class="headerlink" href="#extracting-the-data-to-a-csv" title="Permalink to this heading"></a></h2>
+<p>Extracting the data from the results is actually really easy, if you know how.
+The following code snippet will extract all 18 cell values and write them to results.csv.
+You can use this for any other cell map or argument you want to extract.</p>
+<div class="highlight-python notranslate" id="result-1"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+ <span class="n">Cdata</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;Cells&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">key</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;V&#39;</span><span class="p">)},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="n">Ncells</span><span class="p">]</span> <span class="c1">#Ncells is here 18</span>
+
+ <span class="n">Cdata</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;results.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="common-pitfalls">
+<h2>Common pitfalls<a class="headerlink" href="#common-pitfalls" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Ensure that you have the isoSPI cable plugged into the MAIN isoSPI! If you have it in the AUX, it will not give any valid results.</p></li>
+<li><dl class="simple">
+<dt>Any result displaying 1.49V for all the cells indicates that you did not receive valid data. This could be of many reasons:</dt><dd><ol class="arabic simple">
+<li><p>See pitfall 1</p></li>
+<li><p>You have not powered the DUT board correctly, use a multimeter to test the voltage between Vp and GND.</p></li>
+<li><p>There is timing issue, you are reading the results before the measurement was done.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Be aware of the SPI_WAKEUP. IsoSPI will go the sleep if you have delay of more then 10 ms. After such a delay it is required to have a SPI_WAKEUP. If you forget this, your first command is usually ignored.</p></li>
+<li><p>Be aware of delays. Some thing don’t happend instanly. For example, SRST. After such command a delay is required.</p></li>
+<li><p>Be aware that the SDP-K1 has a setting for 1.8V and 3.3V. The ADBMS6822 required 3.3V When you have a fresh SDP-K1 the jumper is set to 1.8V.</p></li>
+<li><p>If you get connection timeout, check if the SDP-K1 does not have a red LED activated/blinking. If this is the case, reset the SDP-K1 and you are good to go.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ADBMS2950_current_measurement.html" class="btn btn-neutral float-left" title="ADBMS2950 Current Measurement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ADBMS2950.html" class="btn btn-neutral float-right" title="Commands ADBMS2950" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Analog Devices Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

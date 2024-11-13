@@ -1,6 +1,0 @@
-How to get PyBMS API
-===================================
-
-To get PyBMS API, simply download it from my.analog.com. Here you'll find the latest python wheel of PyBMS API. We try to release a new version every month. Please read the changelog for the exact changes.
-
-If you need access to my.analog.com, please reach out to either Marc Zwalua or Richard Beauchemin. They can add you to the list.
